@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mamba.shtrihprinterlibrary.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnPrintReceipt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="printReceipt"
+            android:text="@string/action_print_receipt" />
+
+        <Button
+            android:id="@+id/btnOpenFiscalDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openFiscalDay"
+            android:text="@string/action_open_fiscal_day" />
+
+        <Button
+            android:id="@+id/btnPrintZReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="printZReport"
+            android:text="@string/action_print_z_report" />
+
+        <Button
+            android:id="@+id/btnPrintDuplicateReceipt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="printDuplicateReceipt"
+            android:text="@string/action_print_duplicate_receipt" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/status_text"
+            android:text="@string/shtrih_printing_status"
+            android:gravity="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
