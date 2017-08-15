@@ -173,10 +173,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 223 errors and 116 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 122 errors and 115 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Tue Aug 15 11:44:01 MSK 2017      </nav>
+Check performed at Tue Aug 15 12:08:03 MSK 2017      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -186,11 +186,10 @@ Check performed at Tue Aug 15 11:44:01 MSK 2017      </nav>
       <a class="mdl-navigation__link" href="#Assert"><i class="material-icons warning-icon">warning</i>Assertions (4)</a>
       <a class="mdl-navigation__link" href="#DefaultLocale"><i class="material-icons warning-icon">warning</i>Implied default locale in case conversion (50)</a>
       <a class="mdl-navigation__link" href="#InlinedApi"><i class="material-icons warning-icon">warning</i>Using inlined constants on older versions (12)</a>
-      <a class="mdl-navigation__link" href="#InvalidPackage"><i class="material-icons error-icon">error</i>Package not included in Android (13)</a>
-      <a class="mdl-navigation__link" href="#NewApi"><i class="material-icons error-icon">error</i>Calling new methods on older versions (210)</a>
+      <a class="mdl-navigation__link" href="#InvalidPackage"><i class="material-icons error-icon">error</i>Package not included in Android (12)</a>
+      <a class="mdl-navigation__link" href="#NewApi"><i class="material-icons error-icon">error</i>Calling new methods on older versions (110)</a>
       <a class="mdl-navigation__link" href="#OldTargetApi"><i class="material-icons warning-icon">warning</i>Target SDK attribute is not targeting latest version (1)</a>
       <a class="mdl-navigation__link" href="#SimpleDateFormat"><i class="material-icons warning-icon">warning</i>Implied locale in date format (5)</a>
-      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (1)</a>
       <a class="mdl-navigation__link" href="#SwitchIntDef"><i class="material-icons warning-icon">warning</i>Missing @IntDef in Switch (1)</a>
       <a class="mdl-navigation__link" href="#HardwareIds"><i class="material-icons warning-icon">warning</i>Hardware Id Usage (1)</a>
       <a class="mdl-navigation__link" href="#StaticFieldLeak"><i class="material-icons warning-icon">warning</i>Static Field Leaks (1)</a>
@@ -220,10 +219,10 @@ Check performed at Tue Aug 15 11:44:01 MSK 2017      </nav>
 <td class="countColumn">12</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#InlinedApi">InlinedApi</a>: Using inlined constants on older versions</td></tr>
 <tr>
-<td class="countColumn">13</td><td class="issueColumn"><i class="material-icons error-icon">error</i>
+<td class="countColumn">12</td><td class="issueColumn"><i class="material-icons error-icon">error</i>
 <a href="#InvalidPackage">InvalidPackage</a>: Package not included in Android</td></tr>
 <tr>
-<td class="countColumn">210</td><td class="issueColumn"><i class="material-icons error-icon">error</i>
+<td class="countColumn">110</td><td class="issueColumn"><i class="material-icons error-icon">error</i>
 <a href="#NewApi">NewApi</a>: Calling new methods on older versions</td></tr>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
@@ -231,9 +230,6 @@ Check performed at Tue Aug 15 11:44:01 MSK 2017      </nav>
 <tr>
 <td class="countColumn">5</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#SimpleDateFormat">SimpleDateFormat</a>: Implied locale in date format</td></tr>
-<tr>
-<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#SwitchIntDef">SwitchIntDef</a>: Missing @IntDef in Switch</td></tr>
@@ -1057,10 +1053,9 @@ Dismiss</button>            </div>
 <span class="location"><a href="../../lib/jbarcode-0.2.8.jar">../../lib/jbarcode-0.2.8.jar</a></span>: <span class="message">Invalid package reference in library; not included in Android: <code>java.awt.image</code>. Referenced from <code>com.keypoint.PngEncoder</code>.</span><br />
 <span class="location"><a href="../../lib/jbarcode-0.2.8.jar">../../lib/jbarcode-0.2.8.jar</a></span>: <span class="message">Invalid package reference in library; not included in Android: <code>java.awt</code>. Referenced from <code>com.keypoint.PngEncoder</code>.</span><br />
 <span class="location"><a href="../../lib/jbarcode-0.2.8.jar">../../lib/jbarcode-0.2.8.jar</a></span>: <span class="message">Invalid package reference in library; not included in Android: <code>javax.imageio</code>. Referenced from <code>org.jbarcode.util.ImageUtil</code>.</span><br />
-<span class="location"><a href="../../../../../.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar">../../../../../.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar</a></span>: <span class="message">Invalid package reference in library; not included in Android: <code>java.lang.management</code>. Referenced from <code>org.junit.internal.runners.statements.FailOnTimeout</code>.</span><br />
-<button class="mdl-button mdl-js-button mdl-button--primary" id="InvalidPackageDivLink" onclick="reveal('InvalidPackageDiv');" />+ 8 More Occurrences...</button>
-<div id="InvalidPackageDiv" style="display: none">
 <span class="location"><a href="../../lib/log4j-1.2.16.jar">../../lib/log4j-1.2.16.jar</a></span>: <span class="message">Invalid package reference in library; not included in Android: <code>java.awt.event</code>. Referenced from <code>org.apache.log4j.chainsaw.Main.1</code>.</span><br />
+<button class="mdl-button mdl-js-button mdl-button--primary" id="InvalidPackageDivLink" onclick="reveal('InvalidPackageDiv');" />+ 7 More Occurrences...</button>
+<div id="InvalidPackageDiv" style="display: none">
 <span class="location"><a href="../../lib/log4j-1.2.16.jar">../../lib/log4j-1.2.16.jar</a></span>: <span class="message">Invalid package reference in library; not included in Android: <code>javax.swing.event</code>. Referenced from <code>org.apache.log4j.chainsaw.DetailPanel</code>.</span><br />
 <span class="location"><a href="../../lib/log4j-1.2.16.jar">../../lib/log4j-1.2.16.jar</a></span>: <span class="message">Invalid package reference in library; not included in Android: <code>javax.swing.table</code>. Referenced from <code>org.apache.log4j.chainsaw.ControlPanel</code>.</span><br />
 <span class="location"><a href="../../lib/log4j-1.2.16.jar">../../lib/log4j-1.2.16.jar</a></span>: <span class="message">Invalid package reference in library; not included in Android: <code>javax.swing.text</code>. Referenced from <code>org.apache.log4j.chainsaw.ControlPanel</code>.</span><br />
@@ -1108,19 +1103,6 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:111</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbDevice#getInterfaceCount</code></span><br /><pre class="errorlines">
-<span class="lineno"> 108 </span>  <span class="keyword">boolean</span> opened = <span class="keyword">false</span>;
-<span class="lineno"> 109 </span>  <span class="keyword">try</span> {
-<span class="lineno"> 110 </span>
-<span class="caretline"><span class="lineno"> 111 </span>      <span class="keyword">if</span> (<span class="number">1</span> == mDevice.<span class="error">getInterfaceCount</span>()) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 112 </span>          Log.d(TAG,<span class="string">"device might be castrated ACM device, trying single interface logic"</span>);
-<span class="lineno"> 113 </span>          openSingleInterface();
-<span class="lineno"> 114 </span>      } <span class="keyword">else</span> {
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:111</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDevice#getInterfaceCount</span><br /><pre class="errorlines">
 <span class="lineno"> 108 </span>  <span class="keyword">boolean</span> opened = <span class="keyword">false</span>;
 <span class="lineno"> 109 </span>  <span class="keyword">try</span> {
@@ -1131,22 +1113,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 114 </span>      } <span class="keyword">else</span> {
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:142</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbDevice#getInterface</code></span><br /><pre class="errorlines">
-<span class="lineno"> 139 </span>            <span class="comment">// the following code is inspired by the cdc-acm driver</span>
-<span class="lineno"> 140 </span>            <span class="comment">// in the linux kernel</span>
-<span class="lineno"> 141 </span>
-<span class="caretline"><span class="lineno"> 142 </span>            mControlInterface = mDevice.<span class="error">getInterface</span>(<span class="number">0</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 143 </span>            Log.d(TAG, <span class="string">"Control iface="</span> + mControlInterface);
-<span class="lineno"> 144 </span>
-<span class="lineno"> 145 </span>            mDataInterface = mDevice.getInterface(<span class="number">0</span>);
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:142</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDevice#getInterface</span><br /><pre class="errorlines">
 <span class="lineno"> 139 </span>            <span class="comment">// the following code is inspired by the cdc-acm driver</span>
 <span class="lineno"> 140 </span>            <span class="comment">// in the linux kernel</span>
@@ -1157,24 +1123,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 145 </span>            mDataInterface = mDevice.getInterface(<span class="number">0</span>);
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:145</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbDevice#getInterface</code></span><br /><pre class="errorlines">
-<span class="lineno"> 142 </span>            mControlInterface = mDevice.getInterface(<span class="number">0</span>);
-<span class="lineno"> 143 </span>            Log.d(TAG, <span class="string">"Control iface="</span> + mControlInterface);
-<span class="lineno"> 144 </span>
-<span class="caretline"><span class="lineno"> 145 </span>            mDataInterface = mDevice.<span class="error">getInterface</span>(<span class="number">0</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 146 </span>            Log.d(TAG, <span class="string">"data iface="</span> + mDataInterface);
-<span class="lineno"> 147 </span>
-<span class="lineno"> 148 </span>            <span class="keyword">if</span> (!mConnection.claimInterface(mControlInterface, <span class="keyword">true</span>)) {
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
-<button class="mdl-button mdl-js-button mdl-button--primary" id="NewApiDivLink" onclick="reveal('NewApiDiv');" />+ 205 More Occurrences...</button>
-<div id="NewApiDiv" style="display: none">
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:145</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDevice#getInterface</span><br /><pre class="errorlines">
 <span class="lineno"> 142 </span>            mControlInterface = mDevice.getInterface(<span class="number">0</span>);
 <span class="lineno"> 143 </span>            Log.d(TAG, <span class="string">"Control iface="</span> + mControlInterface);
@@ -1185,22 +1133,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 148 </span>            <span class="keyword">if</span> (!mConnection.claimInterface(mControlInterface, <span class="keyword">true</span>)) {
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:148</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbDeviceConnection#claimInterface</code></span><br /><pre class="errorlines">
-<span class="lineno"> 145 </span>         mDataInterface = mDevice.getInterface(<span class="number">0</span>);
-<span class="lineno"> 146 </span>         Log.d(TAG, <span class="string">"data iface="</span> + mDataInterface);
-<span class="lineno"> 147 </span>
-<span class="caretline"><span class="lineno"> 148 </span>         <span class="keyword">if</span> (!mConnection.<span class="error">claimInterface</span>(mControlInterface, <span class="keyword">true</span>)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 149 </span>             <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Could not claim shared control/data interface."</span>);
-<span class="lineno"> 150 </span>         }
-<span class="lineno"> 151 </span>
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:148</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDeviceConnection#claimInterface</span><br /><pre class="errorlines">
 <span class="lineno"> 145 </span>         mDataInterface = mDevice.getInterface(<span class="number">0</span>);
 <span class="lineno"> 146 </span>         Log.d(TAG, <span class="string">"data iface="</span> + mDataInterface);
@@ -1211,22 +1143,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 151 </span>
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:152</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbInterface#getEndpointCount</code></span><br /><pre class="errorlines">
-<span class="lineno"> 149 </span>      <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Could not claim shared control/data interface."</span>);
-<span class="lineno"> 150 </span>  }
-<span class="lineno"> 151 </span>
-<span class="caretline"><span class="lineno"> 152 </span>  <span class="keyword">int</span> endCount = mControlInterface.<span class="error">getEndpointCount</span>();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 153 </span>
-<span class="lineno"> 154 </span>  <span class="keyword">if</span> (endCount &lt; <span class="number">3</span>) {
-<span class="lineno"> 155 </span>      Log.d(TAG,<span class="string">"not enough endpoints - need 3. count="</span> + mControlInterface.getEndpointCount());
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:152</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbInterface#getEndpointCount</span><br /><pre class="errorlines">
 <span class="lineno"> 149 </span>      <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Could not claim shared control/data interface."</span>);
 <span class="lineno"> 150 </span>  }
@@ -1237,22 +1153,8 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 155 </span>      Log.d(TAG,<span class="string">"not enough endpoints - need 3. count="</span> + mControlInterface.getEndpointCount());
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:155</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbInterface#getEndpointCount</code></span><br /><pre class="errorlines">
-<span class="lineno"> 152 </span>  <span class="keyword">int</span> endCount = mControlInterface.getEndpointCount();
-<span class="lineno"> 153 </span>
-<span class="lineno"> 154 </span>  <span class="keyword">if</span> (endCount &lt; <span class="number">3</span>) {
-<span class="caretline"><span class="lineno"> 155 </span>      Log.d(TAG,<span class="string">"not enough endpoints - need 3. count="</span> + mControlInterface.<span class="error">getEndpointCount</span>());</span>
-<span class="lineno"> 156 </span>      <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Insufficient number of endpoints("</span> + mControlInterface.getEndpointCount() + <span class="string">")"</span>);
-<span class="lineno"> 157 </span>  }
-<span class="lineno"> 158 </span>
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="NewApiDivLink" onclick="reveal('NewApiDiv');" />+ 105 More Occurrences...</button>
+<div id="NewApiDiv" style="display: none">
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:155</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbInterface#getEndpointCount</span><br /><pre class="errorlines">
 <span class="lineno"> 152 </span>  <span class="keyword">int</span> endCount = mControlInterface.getEndpointCount();
 <span class="lineno"> 153 </span>
@@ -1263,21 +1165,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 158 </span>
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:156</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbInterface#getEndpointCount</code></span><br /><pre class="errorlines">
-<span class="lineno"> 153 </span>
-<span class="lineno"> 154 </span>  <span class="keyword">if</span> (endCount &lt; <span class="number">3</span>) {
-<span class="lineno"> 155 </span>      Log.d(TAG,<span class="string">"not enough endpoints - need 3. count="</span> + mControlInterface.getEndpointCount());
-<span class="caretline"><span class="lineno"> 156 </span>      <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Insufficient number of endpoints("</span> + mControlInterface.<span class="error">getEndpointCount</span>() + <span class="string">")"</span>);</span>
-<span class="lineno"> 157 </span>  }
-<span class="lineno"> 158 </span>
-<span class="lineno"> 159 </span>  <span class="comment">// Analyse endpoints for their properties</span></pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:156</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbInterface#getEndpointCount</span><br /><pre class="errorlines">
 <span class="lineno"> 153 </span>
 <span class="lineno"> 154 </span>  <span class="keyword">if</span> (endCount &lt; <span class="number">3</span>) {
@@ -1287,22 +1174,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 158 </span>
 <span class="lineno"> 159 </span>  <span class="comment">// Analyse endpoints for their properties</span></pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:164</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbInterface#getEndpoint</code></span><br /><pre class="errorlines">
-<span class="lineno"> 161 </span>            mReadEndpoint = <span class="keyword">null</span>;
-<span class="lineno"> 162 </span>            mWriteEndpoint = <span class="keyword">null</span>;
-<span class="lineno"> 163 </span>            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; endCount; ++i) {
-<span class="caretline"><span class="lineno"> 164 </span>                UsbEndpoint ep = mControlInterface.<span class="error">getEndpoint</span>(i);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 165 </span>                <span class="keyword">if</span> ((ep.getDirection() == UsbConstants.USB_DIR_IN) &amp;&amp;
-<span class="lineno"> 166 </span>                    (ep.getType() == UsbConstants.USB_ENDPOINT_XFER_INT)) {
-<span class="lineno"> 167 </span>                    Log.d(TAG,<span class="string">"Found controlling endpoint"</span>);
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:164</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbInterface#getEndpoint</span><br /><pre class="errorlines">
 <span class="lineno"> 161 </span>            mReadEndpoint = <span class="keyword">null</span>;
 <span class="lineno"> 162 </span>            mWriteEndpoint = <span class="keyword">null</span>;
@@ -1313,22 +1184,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 167 </span>                    Log.d(TAG,<span class="string">"Found controlling endpoint"</span>);
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:165</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbEndpoint#getDirection</code></span><br /><pre class="errorlines">
-<span class="lineno"> 162 </span>            mWriteEndpoint = <span class="keyword">null</span>;
-<span class="lineno"> 163 </span>            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; endCount; ++i) {
-<span class="lineno"> 164 </span>                UsbEndpoint ep = mControlInterface.getEndpoint(i);
-<span class="caretline"><span class="lineno"> 165 </span>                <span class="keyword">if</span> ((ep.<span class="error">getDirection</span>() == UsbConstants.USB_DIR_IN) &amp;&amp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 166 </span>                    (ep.getType() == UsbConstants.USB_ENDPOINT_XFER_INT)) {
-<span class="lineno"> 167 </span>                    Log.d(TAG,<span class="string">"Found controlling endpoint"</span>);
-<span class="lineno"> 168 </span>                    mControlEndpoint = ep;
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:165</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbEndpoint#getDirection</span><br /><pre class="errorlines">
 <span class="lineno"> 162 </span>            mWriteEndpoint = <span class="keyword">null</span>;
 <span class="lineno"> 163 </span>            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; endCount; ++i) {
@@ -1339,22 +1194,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 168 </span>                    mControlEndpoint = ep;
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:166</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbEndpoint#getType</code></span><br /><pre class="errorlines">
-<span class="lineno"> 163 </span>            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; endCount; ++i) {
-<span class="lineno"> 164 </span>                UsbEndpoint ep = mControlInterface.getEndpoint(i);
-<span class="lineno"> 165 </span>                <span class="keyword">if</span> ((ep.getDirection() == UsbConstants.USB_DIR_IN) &amp;&amp;
-<span class="caretline"><span class="lineno"> 166 </span>                    (ep.<span class="error">getType</span>() == UsbConstants.USB_ENDPOINT_XFER_INT)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 167 </span>                    Log.d(TAG,<span class="string">"Found controlling endpoint"</span>);
-<span class="lineno"> 168 </span>                    mControlEndpoint = ep;
-<span class="lineno"> 169 </span>                } <span class="keyword">else</span> <span class="keyword">if</span> ((ep.getDirection() == UsbConstants.USB_DIR_IN) &amp;&amp;
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:166</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbEndpoint#getType</span><br /><pre class="errorlines">
 <span class="lineno"> 163 </span>            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; endCount; ++i) {
 <span class="lineno"> 164 </span>                UsbEndpoint ep = mControlInterface.getEndpoint(i);
@@ -1365,22 +1204,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 169 </span>                } <span class="keyword">else</span> <span class="keyword">if</span> ((ep.getDirection() == UsbConstants.USB_DIR_IN) &amp;&amp;
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:169</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbEndpoint#getDirection</code></span><br /><pre class="errorlines">
-<span class="lineno"> 166 </span>                  (ep.getType() == UsbConstants.USB_ENDPOINT_XFER_INT)) {
-<span class="lineno"> 167 </span>                  Log.d(TAG,<span class="string">"Found controlling endpoint"</span>);
-<span class="lineno"> 168 </span>                  mControlEndpoint = ep;
-<span class="caretline"><span class="lineno"> 169 </span>              } <span class="keyword">else</span> <span class="keyword">if</span> ((ep.<span class="error">getDirection</span>() == UsbConstants.USB_DIR_IN) &amp;&amp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 170 </span>                         (ep.getType() == UsbConstants.USB_ENDPOINT_XFER_BULK)) {
-<span class="lineno"> 171 </span>                  Log.d(TAG,<span class="string">"Found reading endpoint"</span>);
-<span class="lineno"> 172 </span>                  mReadEndpoint = ep;
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:169</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbEndpoint#getDirection</span><br /><pre class="errorlines">
 <span class="lineno"> 166 </span>                  (ep.getType() == UsbConstants.USB_ENDPOINT_XFER_INT)) {
 <span class="lineno"> 167 </span>                  Log.d(TAG,<span class="string">"Found controlling endpoint"</span>);
@@ -1391,22 +1214,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 172 </span>                  mReadEndpoint = ep;
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:170</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbEndpoint#getType</code></span><br /><pre class="errorlines">
-<span class="lineno"> 167 </span>                  Log.d(TAG,<span class="string">"Found controlling endpoint"</span>);
-<span class="lineno"> 168 </span>                  mControlEndpoint = ep;
-<span class="lineno"> 169 </span>              } <span class="keyword">else</span> <span class="keyword">if</span> ((ep.getDirection() == UsbConstants.USB_DIR_IN) &amp;&amp;
-<span class="caretline"><span class="lineno"> 170 </span>                         (ep.<span class="error">getType</span>() == UsbConstants.USB_ENDPOINT_XFER_BULK)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 171 </span>                  Log.d(TAG,<span class="string">"Found reading endpoint"</span>);
-<span class="lineno"> 172 </span>                  mReadEndpoint = ep;
-<span class="lineno"> 173 </span>              } <span class="keyword">else</span> <span class="keyword">if</span> ((ep.getDirection() == UsbConstants.USB_DIR_OUT) &amp;&amp;
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:170</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbEndpoint#getType</span><br /><pre class="errorlines">
 <span class="lineno"> 167 </span>                  Log.d(TAG,<span class="string">"Found controlling endpoint"</span>);
 <span class="lineno"> 168 </span>                  mControlEndpoint = ep;
@@ -1417,22 +1224,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 173 </span>              } <span class="keyword">else</span> <span class="keyword">if</span> ((ep.getDirection() == UsbConstants.USB_DIR_OUT) &amp;&amp;
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:173</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbEndpoint#getDirection</code></span><br /><pre class="errorlines">
-<span class="lineno"> 170 </span>                         (ep.getType() == UsbConstants.USB_ENDPOINT_XFER_BULK)) {
-<span class="lineno"> 171 </span>                  Log.d(TAG,<span class="string">"Found reading endpoint"</span>);
-<span class="lineno"> 172 </span>                  mReadEndpoint = ep;
-<span class="caretline"><span class="lineno"> 173 </span>              } <span class="keyword">else</span> <span class="keyword">if</span> ((ep.<span class="error">getDirection</span>() == UsbConstants.USB_DIR_OUT) &amp;&amp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 174 </span>                      (ep.getType() == UsbConstants.USB_ENDPOINT_XFER_BULK)) {
-<span class="lineno"> 175 </span>                  Log.d(TAG,<span class="string">"Found writing endpoint"</span>);
-<span class="lineno"> 176 </span>                  mWriteEndpoint = ep;
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:173</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbEndpoint#getDirection</span><br /><pre class="errorlines">
 <span class="lineno"> 170 </span>                         (ep.getType() == UsbConstants.USB_ENDPOINT_XFER_BULK)) {
 <span class="lineno"> 171 </span>                  Log.d(TAG,<span class="string">"Found reading endpoint"</span>);
@@ -1443,22 +1234,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 176 </span>                  mWriteEndpoint = ep;
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:174</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbEndpoint#getType</code></span><br /><pre class="errorlines">
-<span class="lineno"> 171 </span>                    Log.d(TAG,<span class="string">"Found reading endpoint"</span>);
-<span class="lineno"> 172 </span>                    mReadEndpoint = ep;
-<span class="lineno"> 173 </span>                } <span class="keyword">else</span> <span class="keyword">if</span> ((ep.getDirection() == UsbConstants.USB_DIR_OUT) &amp;&amp;
-<span class="caretline"><span class="lineno"> 174 </span>                        (ep.<span class="error">getType</span>() == UsbConstants.USB_ENDPOINT_XFER_BULK)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 175 </span>                    Log.d(TAG,<span class="string">"Found writing endpoint"</span>);
-<span class="lineno"> 176 </span>                    mWriteEndpoint = ep;
-<span class="lineno"> 177 </span>                }
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:174</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbEndpoint#getType</span><br /><pre class="errorlines">
 <span class="lineno"> 171 </span>                    Log.d(TAG,<span class="string">"Found reading endpoint"</span>);
 <span class="lineno"> 172 </span>                    mReadEndpoint = ep;
@@ -1469,22 +1244,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 177 </span>                }
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:197</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbDevice#getInterfaceCount</code></span><br /><pre class="errorlines">
-<span class="lineno"> 194 </span>        }
-<span class="lineno"> 195 </span>
-<span class="lineno"> 196 </span>        <span class="keyword">private</span> <span class="keyword">void</span> openInterface() <span class="keyword">throws</span> IOException {
-<span class="caretline"><span class="lineno"> 197 </span>            Log.d(TAG, <span class="string">"claiming interfaces, count="</span> + mDevice.<span class="error">getInterfaceCount</span>());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 198 </span>
-<span class="lineno"> 199 </span>            mControlInterface = mDevice.getInterface(<span class="number">0</span>);
-<span class="lineno"> 200 </span>            Log.d(TAG, <span class="string">"Control iface="</span> + mControlInterface);
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:197</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDevice#getInterfaceCount</span><br /><pre class="errorlines">
 <span class="lineno"> 194 </span>        }
 <span class="lineno"> 195 </span>
@@ -1495,22 +1254,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 200 </span>            Log.d(TAG, <span class="string">"Control iface="</span> + mControlInterface);
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:199</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbDevice#getInterface</code></span><br /><pre class="errorlines">
-<span class="lineno"> 196 </span>        <span class="keyword">private</span> <span class="keyword">void</span> openInterface() <span class="keyword">throws</span> IOException {
-<span class="lineno"> 197 </span>            Log.d(TAG, <span class="string">"claiming interfaces, count="</span> + mDevice.getInterfaceCount());
-<span class="lineno"> 198 </span>
-<span class="caretline"><span class="lineno"> 199 </span>            mControlInterface = mDevice.<span class="error">getInterface</span>(<span class="number">0</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 200 </span>            Log.d(TAG, <span class="string">"Control iface="</span> + mControlInterface);
-<span class="lineno"> 201 </span>            <span class="comment">// class should be USB_CLASS_COMM</span>
-<span class="lineno"> 202 </span>
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:199</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDevice#getInterface</span><br /><pre class="errorlines">
 <span class="lineno"> 196 </span>        <span class="keyword">private</span> <span class="keyword">void</span> openInterface() <span class="keyword">throws</span> IOException {
 <span class="lineno"> 197 </span>            Log.d(TAG, <span class="string">"claiming interfaces, count="</span> + mDevice.getInterfaceCount());
@@ -1521,22 +1264,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 202 </span>
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:203</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbDeviceConnection#claimInterface</code></span><br /><pre class="errorlines">
-<span class="lineno"> 200 </span>            Log.d(TAG, <span class="string">"Control iface="</span> + mControlInterface);
-<span class="lineno"> 201 </span>            <span class="comment">// class should be USB_CLASS_COMM</span>
-<span class="lineno"> 202 </span>
-<span class="caretline"><span class="lineno"> 203 </span>            <span class="keyword">if</span> (!mConnection.<span class="error">claimInterface</span>(mControlInterface, <span class="keyword">true</span>)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 204 </span>                <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Could not claim control interface."</span>);
-<span class="lineno"> 205 </span>            }
-<span class="lineno"> 206 </span>
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:203</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDeviceConnection#claimInterface</span><br /><pre class="errorlines">
 <span class="lineno"> 200 </span>            Log.d(TAG, <span class="string">"Control iface="</span> + mControlInterface);
 <span class="lineno"> 201 </span>            <span class="comment">// class should be USB_CLASS_COMM</span>
@@ -1547,22 +1274,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 206 </span>
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:207</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbInterface#getEndpoint</code></span><br /><pre class="errorlines">
-<span class="lineno"> 204 </span>            <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Could not claim control interface."</span>);
-<span class="lineno"> 205 </span>        }
-<span class="lineno"> 206 </span>
-<span class="caretline"><span class="lineno"> 207 </span>        mControlEndpoint = mControlInterface.<span class="error">getEndpoint</span>(<span class="number">0</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 208 </span>        Log.d(TAG, <span class="string">"Control endpoint direction: "</span> + mControlEndpoint.getDirection());
-<span class="lineno"> 209 </span>
-<span class="lineno"> 210 </span>        Log.d(TAG, <span class="string">"Claiming data interface."</span>);
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:207</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbInterface#getEndpoint</span><br /><pre class="errorlines">
 <span class="lineno"> 204 </span>            <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Could not claim control interface."</span>);
 <span class="lineno"> 205 </span>        }
@@ -1573,22 +1284,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 210 </span>        Log.d(TAG, <span class="string">"Claiming data interface."</span>);
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:208</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbEndpoint#getDirection</code></span><br /><pre class="errorlines">
-<span class="lineno"> 205 </span>        }
-<span class="lineno"> 206 </span>
-<span class="lineno"> 207 </span>        mControlEndpoint = mControlInterface.getEndpoint(<span class="number">0</span>);
-<span class="caretline"><span class="lineno"> 208 </span>        Log.d(TAG, <span class="string">"Control endpoint direction: "</span> + mControlEndpoint.<span class="error">getDirection</span>());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 209 </span>
-<span class="lineno"> 210 </span>        Log.d(TAG, <span class="string">"Claiming data interface."</span>);
-<span class="lineno"> 211 </span>        mDataInterface = mDevice.getInterface(<span class="number">1</span>);
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:208</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbEndpoint#getDirection</span><br /><pre class="errorlines">
 <span class="lineno"> 205 </span>        }
 <span class="lineno"> 206 </span>
@@ -1599,22 +1294,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 211 </span>        mDataInterface = mDevice.getInterface(<span class="number">1</span>);
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:211</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbDevice#getInterface</code></span><br /><pre class="errorlines">
-<span class="lineno"> 208 </span>        Log.d(TAG, <span class="string">"Control endpoint direction: "</span> + mControlEndpoint.getDirection());
-<span class="lineno"> 209 </span>
-<span class="lineno"> 210 </span>        Log.d(TAG, <span class="string">"Claiming data interface."</span>);
-<span class="caretline"><span class="lineno"> 211 </span>        mDataInterface = mDevice.<span class="error">getInterface</span>(<span class="number">1</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 212 </span>        Log.d(TAG, <span class="string">"data iface="</span> + mDataInterface);
-<span class="lineno"> 213 </span>        <span class="comment">// class should be USB_CLASS_CDC_DATA</span>
-<span class="lineno"> 214 </span>
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:211</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDevice#getInterface</span><br /><pre class="errorlines">
 <span class="lineno"> 208 </span>        Log.d(TAG, <span class="string">"Control endpoint direction: "</span> + mControlEndpoint.getDirection());
 <span class="lineno"> 209 </span>
@@ -1625,22 +1304,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 214 </span>
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:215</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbDeviceConnection#claimInterface</code></span><br /><pre class="errorlines">
-<span class="lineno"> 212 </span>            Log.d(TAG, <span class="string">"data iface="</span> + mDataInterface);
-<span class="lineno"> 213 </span>            <span class="comment">// class should be USB_CLASS_CDC_DATA</span>
-<span class="lineno"> 214 </span>
-<span class="caretline"><span class="lineno"> 215 </span>            <span class="keyword">if</span> (!mConnection.<span class="error">claimInterface</span>(mDataInterface, <span class="keyword">true</span>)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 216 </span>                <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Could not claim data interface."</span>);
-<span class="lineno"> 217 </span>            }
-<span class="lineno"> 218 </span>            mReadEndpoint = mDataInterface.getEndpoint(<span class="number">1</span>);
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:215</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDeviceConnection#claimInterface</span><br /><pre class="errorlines">
 <span class="lineno"> 212 </span>            Log.d(TAG, <span class="string">"data iface="</span> + mDataInterface);
 <span class="lineno"> 213 </span>            <span class="comment">// class should be USB_CLASS_CDC_DATA</span>
@@ -1651,22 +1314,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 218 </span>            mReadEndpoint = mDataInterface.getEndpoint(<span class="number">1</span>);
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:218</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbInterface#getEndpoint</code></span><br /><pre class="errorlines">
-<span class="lineno"> 215 </span>            <span class="keyword">if</span> (!mConnection.claimInterface(mDataInterface, <span class="keyword">true</span>)) {
-<span class="lineno"> 216 </span>                <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Could not claim data interface."</span>);
-<span class="lineno"> 217 </span>            }
-<span class="caretline"><span class="lineno"> 218 </span>            mReadEndpoint = mDataInterface.<span class="error">getEndpoint</span>(<span class="number">1</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 219 </span>            Log.d(TAG, <span class="string">"Read endpoint direction: "</span> + mReadEndpoint.getDirection());
-<span class="lineno"> 220 </span>            mWriteEndpoint = mDataInterface.getEndpoint(<span class="number">0</span>);
-<span class="lineno"> 221 </span>            Log.d(TAG, <span class="string">"Write endpoint direction: "</span> + mWriteEndpoint.getDirection());
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:218</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbInterface#getEndpoint</span><br /><pre class="errorlines">
 <span class="lineno"> 215 </span>            <span class="keyword">if</span> (!mConnection.claimInterface(mDataInterface, <span class="keyword">true</span>)) {
 <span class="lineno"> 216 </span>                <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Could not claim data interface."</span>);
@@ -1677,22 +1324,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 221 </span>            Log.d(TAG, <span class="string">"Write endpoint direction: "</span> + mWriteEndpoint.getDirection());
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:219</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbEndpoint#getDirection</code></span><br /><pre class="errorlines">
-<span class="lineno"> 216 </span>                <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Could not claim data interface."</span>);
-<span class="lineno"> 217 </span>            }
-<span class="lineno"> 218 </span>            mReadEndpoint = mDataInterface.getEndpoint(<span class="number">1</span>);
-<span class="caretline"><span class="lineno"> 219 </span>            Log.d(TAG, <span class="string">"Read endpoint direction: "</span> + mReadEndpoint.<span class="error">getDirection</span>());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 220 </span>            mWriteEndpoint = mDataInterface.getEndpoint(<span class="number">0</span>);
-<span class="lineno"> 221 </span>            Log.d(TAG, <span class="string">"Write endpoint direction: "</span> + mWriteEndpoint.getDirection());
-<span class="lineno"> 222 </span>        }
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:219</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbEndpoint#getDirection</span><br /><pre class="errorlines">
 <span class="lineno"> 216 </span>                <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Could not claim data interface."</span>);
 <span class="lineno"> 217 </span>            }
@@ -1703,22 +1334,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 222 </span>        }
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:220</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbInterface#getEndpoint</code></span><br /><pre class="errorlines">
-<span class="lineno"> 217 </span>            }
-<span class="lineno"> 218 </span>            mReadEndpoint = mDataInterface.getEndpoint(<span class="number">1</span>);
-<span class="lineno"> 219 </span>            Log.d(TAG, <span class="string">"Read endpoint direction: "</span> + mReadEndpoint.getDirection());
-<span class="caretline"><span class="lineno"> 220 </span>            mWriteEndpoint = mDataInterface.<span class="error">getEndpoint</span>(<span class="number">0</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 221 </span>            Log.d(TAG, <span class="string">"Write endpoint direction: "</span> + mWriteEndpoint.getDirection());
-<span class="lineno"> 222 </span>        }
-<span class="lineno"> 223 </span>
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:220</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbInterface#getEndpoint</span><br /><pre class="errorlines">
 <span class="lineno"> 217 </span>            }
 <span class="lineno"> 218 </span>            mReadEndpoint = mDataInterface.getEndpoint(<span class="number">1</span>);
@@ -1729,22 +1344,6 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 223 </span>
 </pre>
 
-
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:221</span>: <span class="message">Call requires API level 12 (current min is 10): <code>android.hardware.usb.UsbEndpoint#getDirection</code></span><br /><pre class="errorlines">
-<span class="lineno"> 218 </span>            mReadEndpoint = mDataInterface.getEndpoint(<span class="number">1</span>);
-<span class="lineno"> 219 </span>            Log.d(TAG, <span class="string">"Read endpoint direction: "</span> + mReadEndpoint.getDirection());
-<span class="lineno"> 220 </span>            mWriteEndpoint = mDataInterface.getEndpoint(<span class="number">0</span>);
-<span class="caretline"><span class="lineno"> 221 </span>            Log.d(TAG, <span class="string">"Write endpoint direction: "</span> + mWriteEndpoint.<span class="error">getDirection</span>());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 222 </span>        }
-<span class="lineno"> 223 </span>
-<span class="lineno"> 224 </span>        <span class="keyword">private</span> <span class="keyword">int</span> sendAcmControlMessage(<span class="keyword">int</span> request, <span class="keyword">int</span> value, <span class="keyword">byte</span>[] buf) {
-</pre>
-
-
-Applies to variants: release<br/>
-Does <b>not</b> apply to variants: debug<br/>
 <span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:221</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbEndpoint#getDirection</span><br /><pre class="errorlines">
 <span class="lineno"> 218 </span>            mReadEndpoint = mDataInterface.getEndpoint(<span class="number">1</span>);
 <span class="lineno"> 219 </span>            Log.d(TAG, <span class="string">"Read endpoint direction: "</span> + mReadEndpoint.getDirection());
@@ -1755,10 +1354,254 @@ Does <b>not</b> apply to variants: debug<br/>
 <span class="lineno"> 224 </span>        <span class="keyword">private</span> <span class="keyword">int</span> sendAcmControlMessage(<span class="keyword">int</span> request, <span class="keyword">int</span> value, <span class="keyword">byte</span>[] buf) {
 </pre>
 
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:225</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDeviceConnection#controlTransfer</span><br /><pre class="errorlines">
+<span class="lineno"> 222 </span>     }
+<span class="lineno"> 223 </span>
+<span class="lineno"> 224 </span>     <span class="keyword">private</span> <span class="keyword">int</span> sendAcmControlMessage(<span class="keyword">int</span> request, <span class="keyword">int</span> value, <span class="keyword">byte</span>[] buf) {
+<span class="caretline"><span class="lineno"> 225 </span>         <span class="keyword">return</span> mConnection.<span class="error">controlTransfer</span>(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 226 </span>                 USB_RT_ACM, request, value, <span class="number">0</span>, buf, buf != <span class="keyword">null</span> ? buf.length : <span class="number">0</span>, <span class="number">5000</span>);
+<span class="lineno"> 227 </span>     }
+<span class="lineno"> 228 </span>
+</pre>
 
-Applies to variants: debug<br/>
-Does <b>not</b> apply to variants: release<br/>
-<br/><b>NOTE: 160 results omitted.</b><br/><br/></div>
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:234</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDeviceConnection#close</span><br /><pre class="errorlines">
+<span class="lineno"> 231 </span>            <span class="keyword">if</span> (mConnection == <span class="keyword">null</span>) {
+<span class="lineno"> 232 </span>                <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Already closed"</span>);
+<span class="lineno"> 233 </span>            }
+<span class="caretline"><span class="lineno"> 234 </span>            mConnection.<span class="error">close</span>();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 235 </span>            mConnection = <span class="keyword">null</span>;
+<span class="lineno"> 236 </span>        }
+<span class="lineno"> 237 </span>
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:241</span>: <span class="message">Call requires API level 12 (current min is 10): new android.hardware.usb.UsbRequest</span><br /><pre class="errorlines">
+<span class="lineno"> 238 </span>        <span class="annotation">@Override</span>
+<span class="lineno"> 239 </span>        <span class="keyword">public</span> <span class="keyword">int</span> read(<span class="keyword">byte</span>[] dest, <span class="keyword">int</span> timeoutMillis) <span class="keyword">throws</span> IOException {
+<span class="lineno"> 240 </span>            <span class="keyword">if</span> (mEnableAsyncReads) {
+<span class="caretline"><span class="lineno"> 241 </span>              <span class="keyword">final</span> UsbRequest request = <span class="error"><span class="keyword">new</span> UsbRequest</span>();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 242 </span>              <span class="keyword">try</span> {
+<span class="lineno"> 243 </span>                request.initialize(mConnection, mReadEndpoint);
+<span class="lineno"> 244 </span>                <span class="keyword">final</span> ByteBuffer buf = ByteBuffer.wrap(dest);
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:243</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbRequest#initialize</span><br /><pre class="errorlines">
+<span class="lineno"> 240 </span>            <span class="keyword">if</span> (mEnableAsyncReads) {
+<span class="lineno"> 241 </span>              <span class="keyword">final</span> UsbRequest request = <span class="keyword">new</span> UsbRequest();
+<span class="lineno"> 242 </span>              <span class="keyword">try</span> {
+<span class="caretline"><span class="lineno"> 243 </span>                request.<span class="error">initialize</span>(mConnection, mReadEndpoint);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 244 </span>                <span class="keyword">final</span> ByteBuffer buf = ByteBuffer.wrap(dest);
+<span class="lineno"> 245 </span>                <span class="keyword">if</span> (!request.queue(buf, dest.length)) {
+<span class="lineno"> 246 </span>                  <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Error queueing request."</span>);
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:245</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbRequest#queue</span><br /><pre class="errorlines">
+<span class="lineno"> 242 </span>              <span class="keyword">try</span> {
+<span class="lineno"> 243 </span>                request.initialize(mConnection, mReadEndpoint);
+<span class="lineno"> 244 </span>                <span class="keyword">final</span> ByteBuffer buf = ByteBuffer.wrap(dest);
+<span class="caretline"><span class="lineno"> 245 </span>                <span class="keyword">if</span> (!request.<span class="error">queue</span>(buf, dest.length)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 246 </span>                  <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Error queueing request."</span>);
+<span class="lineno"> 247 </span>                }
+<span class="lineno"> 248 </span>
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:249</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDeviceConnection#requestWait</span><br /><pre class="errorlines">
+<span class="lineno"> 246 </span>                  <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Error queueing request."</span>);
+<span class="lineno"> 247 </span>                }
+<span class="lineno"> 248 </span>
+<span class="caretline"><span class="lineno"> 249 </span>                <span class="keyword">final</span> UsbRequest response = mConnection.<span class="error">requestWait</span>();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 250 </span>                <span class="keyword">if</span> (response == <span class="keyword">null</span>) {
+<span class="lineno"> 251 </span>                  <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"Null response"</span>);
+<span class="lineno"> 252 </span>                }
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:262</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbRequest#close</span><br /><pre class="errorlines">
+<span class="lineno"> 259 </span>                  <span class="keyword">return</span> <span class="number">0</span>;
+<span class="lineno"> 260 </span>                }
+<span class="lineno"> 261 </span>              } <span class="keyword">finally</span> {
+<span class="caretline"><span class="lineno"> 262 </span>                request.<span class="error">close</span>();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 263 </span>              }
+<span class="lineno"> 264 </span>            }
+<span class="lineno"> 265 </span>
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:269</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDeviceConnection#bulkTransfer</span><br /><pre class="errorlines">
+<span class="lineno"> 266 </span>     <span class="keyword">final</span> <span class="keyword">int</span> numBytesRead;
+<span class="lineno"> 267 </span>     <span class="keyword">synchronized</span> (mReadBufferLock) {
+<span class="lineno"> 268 </span>         <span class="keyword">int</span> readAmt = Math.min(dest.length, mReadBuffer.length);
+<span class="caretline"><span class="lineno"> 269 </span>         numBytesRead = mConnection.<span class="error">bulkTransfer</span>(mReadEndpoint, mReadBuffer, readAmt,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 270 </span>                 timeoutMillis);
+<span class="lineno"> 271 </span>         <span class="keyword">if</span> (numBytesRead &lt; <span class="number">0</span>) {
+<span class="lineno"> 272 </span>             <span class="comment">// This sucks: we get -1 on timeout, not 0 as preferred.</span></pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/CdcAcmSerialDriver.java</a>:308</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDeviceConnection#bulkTransfer</span><br /><pre class="errorlines">
+<span class="lineno"> 305 </span>          writeBuffer = mWriteBuffer;
+<span class="lineno"> 306 </span>      }
+<span class="lineno"> 307 </span>
+<span class="caretline"><span class="lineno"> 308 </span>      amtWritten = mConnection.<span class="error">bulkTransfer</span>(mWriteEndpoint, writeBuffer, writeLength,</span>
+<span class="lineno"> 309 </span>              timeoutMillis);
+<span class="lineno"> 310 </span>  }
+<span class="lineno"> 311 </span>  <span class="keyword">if</span> (amtWritten &lt;= <span class="number">0</span>) {
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java</a>:94</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDevice#getInterfaceCount</span><br /><pre class="errorlines">
+<span class="lineno">  91 </span>            mConnection = connection;
+<span class="lineno">  92 </span>            <span class="keyword">boolean</span> opened = <span class="keyword">false</span>;
+<span class="lineno">  93 </span>            <span class="keyword">try</span> {
+<span class="caretline"><span class="lineno">  94 </span>                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mDevice.<span class="error">getInterfaceCount</span>(); i++) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  95 </span>                    UsbInterface usbIface = mDevice.getInterface(i);
+<span class="lineno">  96 </span>                    <span class="keyword">if</span> (mConnection.claimInterface(usbIface, <span class="keyword">true</span>)) {
+<span class="lineno">  97 </span>                        Log.d(TAG, <span class="string">"claimInterface "</span> + i + <span class="string">" SUCCESS"</span>);
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java</a>:95</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDevice#getInterface</span><br /><pre class="errorlines">
+<span class="lineno">  92 </span>            <span class="keyword">boolean</span> opened = <span class="keyword">false</span>;
+<span class="lineno">  93 </span>            <span class="keyword">try</span> {
+<span class="lineno">  94 </span>                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mDevice.getInterfaceCount(); i++) {
+<span class="caretline"><span class="lineno">  95 </span>                    UsbInterface usbIface = mDevice.<span class="error">getInterface</span>(i);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  96 </span>                    <span class="keyword">if</span> (mConnection.claimInterface(usbIface, <span class="keyword">true</span>)) {
+<span class="lineno">  97 </span>                        Log.d(TAG, <span class="string">"claimInterface "</span> + i + <span class="string">" SUCCESS"</span>);
+<span class="lineno">  98 </span>                    } <span class="keyword">else</span> {
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java</a>:96</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDeviceConnection#claimInterface</span><br /><pre class="errorlines">
+<span class="lineno">  93 </span>            <span class="keyword">try</span> {
+<span class="lineno">  94 </span>                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mDevice.getInterfaceCount(); i++) {
+<span class="lineno">  95 </span>                    UsbInterface usbIface = mDevice.getInterface(i);
+<span class="caretline"><span class="lineno">  96 </span>                    <span class="keyword">if</span> (mConnection.<span class="error">claimInterface</span>(usbIface, <span class="keyword">true</span>)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  97 </span>                        Log.d(TAG, <span class="string">"claimInterface "</span> + i + <span class="string">" SUCCESS"</span>);
+<span class="lineno">  98 </span>                    } <span class="keyword">else</span> {
+<span class="lineno">  99 </span>                        Log.d(TAG, <span class="string">"claimInterface "</span> + i + <span class="string">" FAIL"</span>);
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java</a>:103</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDevice#getInterface</span><br /><pre class="errorlines">
+<span class="lineno"> 100 </span>                    }
+<span class="lineno"> 101 </span>                }
+<span class="lineno"> 102 </span>
+<span class="caretline"><span class="lineno"> 103 </span>                UsbInterface dataIface = mDevice.<span class="error">getInterface</span>(mDevice.getInterfaceCount() - <span class="number">1</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 104 </span>                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; dataIface.getEndpointCount(); i++) {
+<span class="lineno"> 105 </span>                    UsbEndpoint ep = dataIface.getEndpoint(i);
+<span class="lineno"> 106 </span>                    <span class="keyword">if</span> (ep.getType() == UsbConstants.USB_ENDPOINT_XFER_BULK) {
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java</a>:103</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDevice#getInterfaceCount</span><br /><pre class="errorlines">
+<span class="lineno"> 100 </span>                    }
+<span class="lineno"> 101 </span>                }
+<span class="lineno"> 102 </span>
+<span class="caretline"><span class="lineno"> 103 </span>                UsbInterface dataIface = mDevice.getInterface(mDevice.<span class="error">getInterfaceCount</span>() - <span class="number">1</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 104 </span>                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; dataIface.getEndpointCount(); i++) {
+<span class="lineno"> 105 </span>                    UsbEndpoint ep = dataIface.getEndpoint(i);
+<span class="lineno"> 106 </span>                    <span class="keyword">if</span> (ep.getType() == UsbConstants.USB_ENDPOINT_XFER_BULK) {
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java</a>:104</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbInterface#getEndpointCount</span><br /><pre class="errorlines">
+<span class="lineno"> 101 </span>                }
+<span class="lineno"> 102 </span>
+<span class="lineno"> 103 </span>                UsbInterface dataIface = mDevice.getInterface(mDevice.getInterfaceCount() - <span class="number">1</span>);
+<span class="caretline"><span class="lineno"> 104 </span>                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; dataIface.<span class="error">getEndpointCount</span>(); i++) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 105 </span>                    UsbEndpoint ep = dataIface.getEndpoint(i);
+<span class="lineno"> 106 </span>                    <span class="keyword">if</span> (ep.getType() == UsbConstants.USB_ENDPOINT_XFER_BULK) {
+<span class="lineno"> 107 </span>                        <span class="keyword">if</span> (ep.getDirection() == UsbConstants.USB_DIR_IN) {
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java</a>:105</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbInterface#getEndpoint</span><br /><pre class="errorlines">
+<span class="lineno"> 102 </span>
+<span class="lineno"> 103 </span>                UsbInterface dataIface = mDevice.getInterface(mDevice.getInterfaceCount() - <span class="number">1</span>);
+<span class="lineno"> 104 </span>                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; dataIface.getEndpointCount(); i++) {
+<span class="caretline"><span class="lineno"> 105 </span>                    UsbEndpoint ep = dataIface.<span class="error">getEndpoint</span>(i);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 106 </span>                    <span class="keyword">if</span> (ep.getType() == UsbConstants.USB_ENDPOINT_XFER_BULK) {
+<span class="lineno"> 107 </span>                        <span class="keyword">if</span> (ep.getDirection() == UsbConstants.USB_DIR_IN) {
+<span class="lineno"> 108 </span>                            mReadEndpoint = ep;
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java</a>:106</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbEndpoint#getType</span><br /><pre class="errorlines">
+<span class="lineno"> 103 </span>                UsbInterface dataIface = mDevice.getInterface(mDevice.getInterfaceCount() - <span class="number">1</span>);
+<span class="lineno"> 104 </span>                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; dataIface.getEndpointCount(); i++) {
+<span class="lineno"> 105 </span>                    UsbEndpoint ep = dataIface.getEndpoint(i);
+<span class="caretline"><span class="lineno"> 106 </span>                    <span class="keyword">if</span> (ep.<span class="error">getType</span>() == UsbConstants.USB_ENDPOINT_XFER_BULK) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 107 </span>                        <span class="keyword">if</span> (ep.getDirection() == UsbConstants.USB_DIR_IN) {
+<span class="lineno"> 108 </span>                            mReadEndpoint = ep;
+<span class="lineno"> 109 </span>                        } <span class="keyword">else</span> {
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java</a>:107</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbEndpoint#getDirection</span><br /><pre class="errorlines">
+<span class="lineno"> 104 </span>                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; dataIface.getEndpointCount(); i++) {
+<span class="lineno"> 105 </span>                    UsbEndpoint ep = dataIface.getEndpoint(i);
+<span class="lineno"> 106 </span>                    <span class="keyword">if</span> (ep.getType() == UsbConstants.USB_ENDPOINT_XFER_BULK) {
+<span class="caretline"><span class="lineno"> 107 </span>                        <span class="keyword">if</span> (ep.<span class="error">getDirection</span>() == UsbConstants.USB_DIR_IN) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 108 </span>                            mReadEndpoint = ep;
+<span class="lineno"> 109 </span>                        } <span class="keyword">else</span> {
+<span class="lineno"> 110 </span>                            mWriteEndpoint = ep;
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java</a>:140</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDeviceConnection#close</span><br /><pre class="errorlines">
+<span class="lineno"> 137 </span>            <span class="comment">// TODO: nothing sended on close, maybe needed?</span>
+<span class="lineno"> 138 </span>
+<span class="lineno"> 139 </span>            <span class="keyword">try</span> {
+<span class="caretline"><span class="lineno"> 140 </span>                mConnection.<span class="error">close</span>();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 141 </span>            } <span class="keyword">finally</span> {
+<span class="lineno"> 142 </span>                mConnection = <span class="keyword">null</span>;
+<span class="lineno"> 143 </span>            }
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java</a>:152</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDeviceConnection#bulkTransfer</span><br /><pre class="errorlines">
+<span class="lineno"> 149 </span>            <span class="keyword">final</span> <span class="keyword">int</span> numBytesRead;
+<span class="lineno"> 150 </span>            <span class="keyword">synchronized</span> (mReadBufferLock) {
+<span class="lineno"> 151 </span>                <span class="keyword">int</span> readAmt = Math.min(dest.length, mReadBuffer.length);
+<span class="caretline"><span class="lineno"> 152 </span>                numBytesRead = mConnection.<span class="error">bulkTransfer</span>(mReadEndpoint, mReadBuffer, readAmt,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 153 </span>                        timeoutMillis);
+<span class="lineno"> 154 </span>                <span class="keyword">if</span> (numBytesRead &lt; <span class="number">0</span>) {
+<span class="lineno"> 155 </span>                    <span class="comment">// This sucks: we get -1 on timeout, not 0 as preferred.</span></pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java</a>:186</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDeviceConnection#bulkTransfer</span><br /><pre class="errorlines">
+<span class="lineno"> 183 </span>                        writeBuffer = mWriteBuffer;
+<span class="lineno"> 184 </span>                    }
+<span class="lineno"> 185 </span>
+<span class="caretline"><span class="lineno"> 186 </span>                    amtWritten = mConnection.<span class="error">bulkTransfer</span>(mWriteEndpoint, writeBuffer, writeLength,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 187 </span>                            timeoutMillis);
+<span class="lineno"> 188 </span>                }
+<span class="lineno"> 189 </span>                <span class="keyword">if</span> (amtWritten &lt;= <span class="number">0</span>) {
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java</a>:202</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDeviceConnection#controlTransfer</span><br /><pre class="errorlines">
+<span class="lineno"> 199 </span>
+<span class="lineno"> 200 </span>        <span class="keyword">private</span> <span class="keyword">int</span> controlOut(<span class="keyword">int</span> request, <span class="keyword">int</span> value, <span class="keyword">int</span> index) {
+<span class="lineno"> 201 </span>            <span class="keyword">final</span> <span class="keyword">int</span> REQTYPE_HOST_TO_DEVICE = <span class="number">0x41</span>;
+<span class="caretline"><span class="lineno"> 202 </span>            <span class="keyword">return</span> mConnection.<span class="error">controlTransfer</span>(REQTYPE_HOST_TO_DEVICE, request,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 203 </span>                    value, index, <span class="keyword">null</span>, <span class="number">0</span>, USB_TIMEOUT_MILLIS);
+<span class="lineno"> 204 </span>        }
+<span class="lineno"> 205 </span>
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java">../../src/com/shtrih/hoho/android/usbserial/driver/Ch34xSerialDriver.java</a>:209</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDeviceConnection#controlTransfer</span><br /><pre class="errorlines">
+<span class="lineno"> 206 </span>
+<span class="lineno"> 207 </span>        <span class="keyword">private</span> <span class="keyword">int</span> controlIn(<span class="keyword">int</span> request, <span class="keyword">int</span> value, <span class="keyword">int</span> index, <span class="keyword">byte</span>[] buffer) {
+<span class="lineno"> 208 </span>            <span class="keyword">final</span> <span class="keyword">int</span> REQTYPE_HOST_TO_DEVICE = UsbConstants.USB_TYPE_VENDOR | UsbConstants.USB_DIR_IN;
+<span class="caretline"><span class="lineno"> 209 </span>            <span class="keyword">return</span> mConnection.<span class="error">controlTransfer</span>(REQTYPE_HOST_TO_DEVICE, request,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 210 </span>                    value, index, buffer, buffer.length, USB_TIMEOUT_MILLIS);
+<span class="lineno"> 211 </span>        }
+<span class="lineno"> 212 </span></pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CommonUsbSerialPort.java">../../src/com/shtrih/hoho/android/usbserial/driver/CommonUsbSerialPort.java</a>:65</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDevice#getDeviceName</span><br /><pre class="errorlines">
+<span class="lineno">  62 </span>    <span class="annotation">@Override</span>
+<span class="lineno">  63 </span>    <span class="keyword">public</span> String toString() {
+<span class="lineno">  64 </span>        <span class="keyword">return</span> String.format(<span class="string">"&lt;%s device_name=%s device_id=%s port_number=%s>"</span>,
+<span class="caretline"><span class="lineno">  65 </span>                getClass().getSimpleName(), mDevice.<span class="error">getDeviceName</span>(),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  66 </span>                mDevice.getDeviceId(), mPortNumber);
+<span class="lineno">  67 </span>    }
+<span class="lineno">  68 </span>
+</pre>
+
+<span class="location"><a href="../../src/com/shtrih/hoho/android/usbserial/driver/CommonUsbSerialPort.java">../../src/com/shtrih/hoho/android/usbserial/driver/CommonUsbSerialPort.java</a>:66</span>: <span class="message">Call requires API level 12 (current min is 10): android.hardware.usb.UsbDevice#getDeviceId</span><br /><pre class="errorlines">
+<span class="lineno">  63 </span>    <span class="keyword">public</span> String toString() {
+<span class="lineno">  64 </span>        <span class="keyword">return</span> String.format(<span class="string">"&lt;%s device_name=%s device_id=%s port_number=%s>"</span>,
+<span class="lineno">  65 </span>                getClass().getSimpleName(), mDevice.getDeviceName(),
+<span class="caretline"><span class="lineno">  66 </span>                mDevice.<span class="error">getDeviceId</span>(), mPortNumber);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  67 </span>    }
+<span class="lineno">  68 </span>
+<span class="lineno">  69 </span>    <span class="javadoc">/**
+</span></pre>
+
+<br/><b>NOTE: 60 results omitted.</b><br/><br/></div>
 </div>
 <div class="metadata"><div class="explanation" id="explanationNewApi" style="display: none;">
 This check scans through all the Android API calls in the application and warns about any calls that are not available on <b>all</b> versions targeted by this application (according to its minimum SDK attribute in the manifest).<br/>
@@ -1804,13 +1647,13 @@ Dismiss</button>            </div>
 <div class="issue">
 <div class="warningslist">
 <span class="location"><a href="../../build.gradle">../../build.gradle</a>:14</span>: <span class="message">Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.</span><br /><pre class="errorlines">
-<span class="lineno">  11 </span>
-<span class="lineno">  12 </span>    defaultConfig {
-<span class="lineno">  13 </span>        minSdkVersion <span class="number">10</span>
-<span class="caretline"><span class="lineno">  14 </span>        <span class="warning">targetSdkVersion <span class="number">25</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  15 </span>        versionCode <span class="number">1</span>
-<span class="lineno">  16 </span>        versionName <span class="string">"$version"</span>
-<span class="lineno">  17 </span>        testInstrumentationRunner <span class="string">"android.support.test.runner.AndroidJUnitRunner"</span>
+<span class="lineno"> 11 </span>
+<span class="lineno"> 12 </span>    defaultConfig {
+<span class="lineno"> 13 </span>        minSdkVersion <span class="number">10</span>
+<span class="caretline"><span class="lineno"> 14 </span>        <span class="warning">targetSdkVersion <span class="number">25</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 15 </span>        versionCode <span class="number">1</span>
+<span class="lineno"> 16 </span>        versionName <span class="string">"$version"</span>
+<span class="lineno"> 17 </span>        testInstrumentationRunner <span class="string">"android.support.test.runner.AndroidJUnitRunner"</span>
 </pre>
 
 </div>
@@ -1931,54 +1774,8 @@ Therefore, you should either use the form of the SimpleDateFormat constructor wh
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card7Link" onclick="hideid('card7');">
 Dismiss</button>            </div>
             </div>
-          </section><a name="GradleDependency"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card8" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Obsolete Gradle Dependency</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:88</span>: <span class="message">A newer version of com.android.support:support-annotations than 25.1.0 is available: 25.3.1</span><br /><pre class="errorlines">
-<span class="lineno">  85 </span>}
-<span class="lineno">  86 </span>
-<span class="lineno">  87 </span>dependencies {
-<span class="caretline"><span class="lineno">  88 </span>    <span class="warning">androidTestCompile <span class="string">'com.android.support:support-annotations:25.1.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  89 </span>    androidTestCompile <span class="string">'com.android.support.test:runner:0.5'</span>
-<span class="lineno">  90 </span>    androidTestCompile <span class="string">'com.android.support.test:rules:0.5'</span>
-<span class="lineno">  91 </span>    testCompile <span class="string">'junit:junit:4.12'</span>
-</pre>
-
-</div>
-<div class="metadata"><div class="explanation" id="explanationGradleDependency" style="display: none;">
-This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.<br/><br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
-To suppress this error, use the issue id "GradleDependency" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-</div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">GradleDependency</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Correctness</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 4/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationGradleDependencyLink" onclick="reveal('explanationGradleDependency');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card8Link" onclick="hideid('card8');">
-Dismiss</button>            </div>
-            </div>
           </section><a name="SwitchIntDef"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card9" style="display: block;">
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card8" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
     <h2 class="mdl-card__title-text">Missing @IntDef in Switch</h2>
@@ -2020,13 +1817,13 @@ To suppress this error, use the issue id "SwitchIntDef" as explained in the <a h
               </div>
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationSwitchIntDefLink" onclick="reveal('explanationSwitchIntDef');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card9Link" onclick="hideid('card9');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card8Link" onclick="hideid('card8');">
 Dismiss</button>            </div>
             </div>
           </section>
 <a name="Security"></a>
 <a name="HardwareIds"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card10" style="display: block;">
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card9" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
     <h2 class="mdl-card__title-text">Hardware Id Usage</h2>
@@ -2068,13 +1865,13 @@ Using these device identifiers is not recommended other than for high value frau
               </div>
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationHardwareIdsLink" onclick="reveal('explanationHardwareIds');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card10Link" onclick="hideid('card10');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card9Link" onclick="hideid('card9');">
 Dismiss</button>            </div>
             </div>
           </section>
 <a name="Performance"></a>
 <a name="StaticFieldLeak"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card11" style="display: block;">
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card10" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
     <h2 class="mdl-card__title-text">Static Field Leaks</h2>
@@ -2115,11 +1912,11 @@ A static field will leak contexts.<br/><br/>To suppress this error, use the issu
               </div>
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationStaticFieldLeakLink" onclick="reveal('explanationStaticFieldLeak');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card11Link" onclick="hideid('card11');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card10Link" onclick="hideid('card10');">
 Dismiss</button>            </div>
             </div>
           </section><a name="UseSparseArrays"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card12" style="display: block;">
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card11" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
     <h2 class="mdl-card__title-text">HashMap can be replaced with SparseArray</h2>
@@ -2164,11 +1961,11 @@ If you need to construct a <code>HashMap</code> because you need to call an API 
               </div>
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationUseSparseArraysLink" onclick="reveal('explanationUseSparseArrays');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card12Link" onclick="hideid('card12');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card11Link" onclick="hideid('card11');">
 Dismiss</button>            </div>
             </div>
           </section><a name="UseValueOf"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card13" style="display: block;">
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card12" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
     <h2 class="mdl-card__title-text">Should use valueOf instead of new</h2>
@@ -2589,12 +2386,12 @@ To suppress this error, use the issue id "UseValueOf" as explained in the <a hre
               </div>
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationUseValueOfLink" onclick="reveal('explanationUseValueOf');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card13Link" onclick="hideid('card13');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card12Link" onclick="hideid('card12');">
 Dismiss</button>            </div>
             </div>
           </section>
 <a name="MissingIssues"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card14" style="display: block;">
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card13" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
     <h2 class="mdl-card__title-text">Disabled Checks</h2>
@@ -2836,12 +2633,12 @@ To suppress this error, use the issue id "UnusedIds" as explained in the <a href
 </div>              </div>
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="SuppressedIssuesLink" onclick="reveal('SuppressedIssues');">
-List Missing Issues</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card14Link" onclick="hideid('card14');">
+List Missing Issues</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card13Link" onclick="hideid('card13');">
 Dismiss</button>            </div>
             </div>
           </section>
 <a name="SuppressInfo"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card15" style="display: block;">
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card14" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
     <h2 class="mdl-card__title-text">Suppressing Warnings and Errors</h2>
