@@ -10,38 +10,27 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.shtrih.fiscalprinter.ShtrihFiscalPrinter;
-import com.shtrih.util.StaticContext;
 
+import com.shtrih.util.StaticContext;
 import java.util.ArrayList;
 import java.util.List;
-
-import jpos.FiscalPrinter;
-import jpos.JposConst;
-import jpos.JposException;
+import test.librarywrapper.ShtrihModule;
 import test.librarywrapper.ShtrihPrinterCallbackReceiver;
-import test.librarywrapper.ShtrihPrinterController;
-import test.librarywrapper.config.JposConfig;
 import test.librarywrapper.constants.OperationType;
-import test.librarywrapper.constants.PrintType;
 import test.librarywrapper.data.GoodsData;
 import test.librarywrapper.data.ReceiptInformation;
 import test.librarywrapper.data.ShtrihPrinterInputData;
 
 public class MainActivity extends AppCompatActivity implements ShtrihPrinterCallbackReceiver {
-
-    private ShtrihFiscalPrinter printer = null;
-    private ShtrihPrinterController controller = null;
     private TextView statusText;
-    private BluetoothManager btManager;
+    private ShtrihModule shtrihModule;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         StaticContext.setContext(getApplicationContext());
-        printer = new ShtrihFiscalPrinter(new FiscalPrinter());
-        controller = new ShtrihPrinterController(this, printer);
+        shtrihModule = new ShtrihModule(MainActivity.this, this);
         statusText = (TextView) findViewById(R.id.status_text);
     }
 
@@ -52,13 +41,7 @@ public class MainActivity extends AppCompatActivity implements ShtrihPrinterCall
                 if (resultCode == Activity.RESULT_OK) {
                     String address = data.getExtras().getString(DeviceListActivity.EXTRA_DEVICE_ADDRESS);
                     try {
-                        JposConfig.configure("ShtrihFptr", address, getApplicationContext());
-                        if (printer.getState() != JposConst.JPOS_S_CLOSED) {
-                            printer.close();
-                        }
-                        printer.open("ShtrihFptr");
-                        printer.claim(3000);
-                        printer.setDeviceEnabled(true);
+                        shtrihModule.setSelectedDevice(address);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -92,19 +75,16 @@ public class MainActivity extends AppCompatActivity implements ShtrihPrinterCall
         groceries.add(new GoodsData(20, "bread", 4));
         ReceiptInformation info = new ReceiptInformation.Builder().build();
         final ShtrihPrinterInputData data = new ShtrihPrinterInputData(OperationType.PAYMENT, groceries, true, info);
-        controller.print(PrintType.FISCAL_TRANSACTION, data);
+        shtrihModule.printFiscalCheck(this, data);
+
     }
 
     public void printZReport(View v) {
-        controller.print(PrintType.Z_REPORT, null);
-    }
-
-    public void openFiscalDay(View v) throws JposException {
-        printer.openFiscalDay();
+        shtrihModule.printReportZ(this);
     }
 
     public void printDuplicateReceipt(View v) {
-        controller.print(PrintType.REPEAT_TRANSACTION, null);
+        shtrihModule.printRepeatedCheck(this, null);
     }
 
     @Override

@@ -87,4 +87,5 @@ dependencies {
     compile files('lib/xerces4android.jar')
     compile files('lib/zxing-3.2.2.jar')
     compile files('lib/zxing-core-3.2.2-javadoc.jar')
+    compile 'com.google.guava:guava:19.0'
 }

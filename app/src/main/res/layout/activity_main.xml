@@ -18,12 +18,12 @@
             android:onClick="printReceipt"
             android:text="@string/action_print_receipt" />
 
-        <Button
-            android:id="@+id/btnOpenFiscalDay"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="openFiscalDay"
-            android:text="@string/action_open_fiscal_day" />
+        <!--<Button-->
+            <!--android:id="@+id/btnOpenFiscalDay"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:onClick="openFiscalDay"-->
+            <!--android:text="@string/action_open_fiscal_day" />-->
 
         <Button
             android:id="@+id/btnPrintZReport"
