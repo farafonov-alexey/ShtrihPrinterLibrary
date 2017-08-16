@@ -2,6 +2,7 @@ package test.librarywrapper;
 
 import android.content.Context;
 import android.os.Environment;
+import android.util.Log;
 
 import com.shtrih.fiscalprinter.ShtrihFiscalPrinter;
 import com.shtrih.util.SysUtils;
@@ -60,8 +61,9 @@ public class ShtrihPrinterController {
             }
             printer.open("ShtrihFptr");
             printer.claim(3000);
-            callbackReceiver.onConnected();
+//            callbackReceiver.onConnected();
             printer.setDeviceEnabled(true);
+            Log.d("happy", "after setEnabled");
         } catch (Exception e) {
             e.printStackTrace();
         }

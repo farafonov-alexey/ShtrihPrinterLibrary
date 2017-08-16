@@ -90,8 +90,9 @@ public class ShtrihModule implements LibraryInterface {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                controller.setCallbackReceiver(receiver);
+//                controller.setCallbackReceiver(receiver);
                 controller.connectDevice();
+                receiver.onConnected();
             }
         }).run();
     }
