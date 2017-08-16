@@ -102,6 +102,9 @@ public class DeviceListActivity extends AppCompatActivity {
             intent.putExtra(EXTRA_DEVICE_ADDRESS, address);
             setResult(Activity.RESULT_OK, intent);
             finish();
+
+
+
         }
     };
 

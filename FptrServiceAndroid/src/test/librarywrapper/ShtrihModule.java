@@ -1,14 +1,10 @@
 package test.librarywrapper;
 
 import android.content.Context;
-
 import com.shtrih.fiscalprinter.ShtrihFiscalPrinter;
-
-import java.lang.ref.WeakReference;
-
 import jpos.FiscalPrinter;
-import test.librarywrapper.constants.PrintType;
 import test.librarywrapper.data.ShtrihPrinterInputData;
+import test.librarywrapper.enums.TypePrint;
 
 /**
  * Created by mamba on 15.08.2017.
@@ -17,70 +13,88 @@ import test.librarywrapper.data.ShtrihPrinterInputData;
 public class ShtrihModule implements LibraryInterface {
     private ShtrihPrinterController controller;
     private ShtrihFiscalPrinter printer;
-    private WeakReference<Context> weakContext;
-    private ShtrihPrinterPreferences preferences;
     private ShtrihPrinterCallbackReceiver receiver;
-    private BluetoothManager btManager;
 
 
 
-    public ShtrihModule(Context context, ShtrihPrinterCallbackReceiver receiver) {
+    public ShtrihModule(Context context) {
         this.printer = new ShtrihFiscalPrinter(new FiscalPrinter());
-        this.weakContext = new WeakReference<>(context);
-        this.controller = new ShtrihPrinterController(printer, context);
-        this.weakContext = new WeakReference<>(context);
-        this.preferences = new ShtrihPrinterPreferences(context);
-        this.receiver = receiver;
-        this.btManager = new BluetoothManager();
+        this.controller = new ShtrihPrinterController(printer, context, new ShtrihPrinterPreferences(context));
     }
 
     @Override
     public void addPrinter() {
+        controller.setCallbackReceiver(receiver);
         controller.addPrinter();
     }
 
     @Override
     public String isSavedPrinterName() {
-        return preferences.loadNamePrinter();
+        return controller.loadNamePrinter();
     }
 
     @Override
     public void clearSavedPrinterName() {
-        preferences.savePrinterName(null);
+        controller.clearDataBases();
     }
 
     @Override
-    public void printFiscalCheck(ShtrihPrinterCallbackReceiver receiver, ShtrihPrinterInputData inputData) {
+    public void printFiscalCheck(final ShtrihPrinterInputData inputData) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                controller.setCallbackReceiver(receiver);
+                controller.print(TypePrint.FISCAL_TRANSACTION, inputData);
+            }
+        }).run();
+
+    }
+
+    @Override
+    public void printRepeatedCheck(ShtrihPrinterInputData inputData) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                controller.setCallbackReceiver(receiver);
+                controller.print(TypePrint.REPEAT_TRANSACTION, null);
+            }
+        }).run();
+    }
+
+    @Override
+    public void printSlipCheck(ShtrihPrinterInputData inputData) {
+
+    }
+
+    @Override
+    public void printReportX() {
+        printReportZ();
+    }
+
+    @Override
+    public void printReportZ() {
         controller.setCallbackReceiver(receiver);
-        controller.print(PrintType.FISCAL_TRANSACTION, inputData);
+        controller.print(TypePrint.Z_REPORT, null);
     }
 
     @Override
-    public void printRepeatedCheck(ShtrihPrinterCallbackReceiver receiver, ShtrihPrinterInputData inputData) {
-        controller.setCallbackReceiver(receiver);
-        controller.print(PrintType.REPEAT_TRANSACTION, null);
+    public void setSelectedDevice(String name) throws Exception {
+        controller.setSelectedDevices(name);
     }
 
-    @Override
-    public void printSlipCheck(ShtrihPrinterCallbackReceiver receiver, ShtrihPrinterInputData inputData) {
-
+    public void setCallbackReceiver(ShtrihPrinterCallbackReceiver receiver){
+        this.receiver = receiver;
     }
 
-    @Override
-    public void printReportX(ShtrihPrinterCallbackReceiver receiver) {
-        printReportZ(receiver);
+    public void connectDevice(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                controller.setCallbackReceiver(receiver);
+                controller.connectDevice();
+            }
+        }).run();
     }
 
-    @Override
-    public void printReportZ(ShtrihPrinterCallbackReceiver receiver) {
-        controller.setCallbackReceiver(receiver);
-        controller.print(PrintType.Z_REPORT, null);
-        receiver.onReportPrintingZ();
-    }
 
-    @Override
-    public void setSelectedDevice(String macAddress) throws Exception {
-        controller.connectDevice(macAddress);
-        receiver.onInitializationPreferences();
-    }
 }

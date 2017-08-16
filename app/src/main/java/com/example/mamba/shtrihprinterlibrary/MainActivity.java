@@ -1,13 +1,15 @@
 package com.example.mamba.shtrihprinterlibrary;
 
 import android.app.Activity;
-import android.bluetooth.BluetoothManager;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -16,10 +18,11 @@ import java.util.ArrayList;
 import java.util.List;
 import test.librarywrapper.ShtrihModule;
 import test.librarywrapper.ShtrihPrinterCallbackReceiver;
-import test.librarywrapper.constants.OperationType;
 import test.librarywrapper.data.GoodsData;
 import test.librarywrapper.data.ReceiptInformation;
 import test.librarywrapper.data.ShtrihPrinterInputData;
+import test.librarywrapper.enums.PrinterOperationType;
+import test.librarywrapper.enums.TypePrint;
 
 public class MainActivity extends AppCompatActivity implements ShtrihPrinterCallbackReceiver {
     private TextView statusText;
@@ -30,8 +33,10 @@ public class MainActivity extends AppCompatActivity implements ShtrihPrinterCall
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         StaticContext.setContext(getApplicationContext());
-        shtrihModule = new ShtrihModule(MainActivity.this, this);
+        shtrihModule = new ShtrihModule(MainActivity.this);
+        shtrihModule.setCallbackReceiver(this);
         statusText = (TextView) findViewById(R.id.status_text);
+        shtrihModule.addPrinter();
     }
 
     @Override
@@ -74,22 +79,21 @@ public class MainActivity extends AppCompatActivity implements ShtrihPrinterCall
         groceries.add(new GoodsData(15, "milk", 2));
         groceries.add(new GoodsData(20, "bread", 4));
         ReceiptInformation info = new ReceiptInformation.Builder().build();
-        final ShtrihPrinterInputData data = new ShtrihPrinterInputData(OperationType.PAYMENT, groceries, true, info);
-        shtrihModule.printFiscalCheck(this, data);
-
+        final ShtrihPrinterInputData data = new ShtrihPrinterInputData(PrinterOperationType.PAYMENT, groceries, true, info);
+        shtrihModule.printFiscalCheck(data);
     }
 
     public void printZReport(View v) {
-        shtrihModule.printReportZ(this);
+        shtrihModule.printReportZ();
     }
 
     public void printDuplicateReceipt(View v) {
-        shtrihModule.printRepeatedCheck(this, null);
+        shtrihModule.printRepeatedCheck( null);
     }
 
     @Override
     public void onInitializationPreferences() {
-
+        Log.d("happy", "onInitialization");
     }
 
     @Override
@@ -98,13 +102,13 @@ public class MainActivity extends AppCompatActivity implements ShtrihPrinterCall
     }
 
     @Override
-    public void onCompletePrinting(int printType) {
+    public void onCompletePrinting(TypePrint typePrint) {
         statusText.setText("Печать окончена");
     }
 
     @Override
-    public void onErrorPrinting(int printType, String error) {
-        statusText.setText("код операции " + printType + ". " + error);
+    public void onErrorPrinting(TypePrint typePrint, String error) {
+        statusText.setText("код операции " + typePrint.getCodeType() + ". " + error);
     }
 
     @Override
@@ -115,5 +119,20 @@ public class MainActivity extends AppCompatActivity implements ShtrihPrinterCall
     @Override
     public void onReportAlreadyClosed() {
 
+    }
+
+    @Override
+    public void onConnected() {
+        Log.d("happy", "onConnected");
+        List<GoodsData> groceries = new ArrayList<>();
+        groceries.add(new GoodsData(15, "milk", 2));
+        groceries.add(new GoodsData(20, "bread", 4));
+        ReceiptInformation info = new ReceiptInformation.Builder().build();
+        final ShtrihPrinterInputData data = new ShtrihPrinterInputData(PrinterOperationType.PAYMENT, groceries, true, info);
+        shtrihModule.printFiscalCheck(data);
+    }
+
+    public void onClickConnection(View view) {
+        shtrihModule.connectDevice();
     }
 }

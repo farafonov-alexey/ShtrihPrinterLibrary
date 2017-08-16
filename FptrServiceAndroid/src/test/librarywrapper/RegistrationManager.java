@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -17,24 +18,10 @@ public class RegistrationManager {
     private ShtrihPrinterPreferences printerPreferences;
     private String address, port;
 
-    public RegistrationManager(Context context) {
-        printerPreferences = new ShtrihPrinterPreferences(context);
+    public RegistrationManager(Context context, ShtrihPrinterPreferences shtrihPrinterPreferences) {
+        this.printerPreferences = shtrihPrinterPreferences;
         address = null;
         port = null;
-    }
-
-    public void connectionSettings(String address, String port) {
-        this.address = address;
-        this.port = port;
-    }
-
-    public String isSettings() {
-        String settings = printerPreferences.getSettings();
-        if(settings == null) {
-            return null;
-        } else {
-            return settings;
-        }
     }
 
     public String isSavedNamePrinter() {
@@ -62,5 +49,33 @@ public class RegistrationManager {
     public void setSelectedDevice(String deviceExternal) {
         BluetoothDevice device = (BluetoothDevice) deviceSelectionService.getObject(deviceExternal);
         printerPreferences.savePrinterName(device.getName());
+        printerPreferences.saveMacAddress(device.getAddress());
+    }
+
+    public String getDeviceMacAdress(String name) {
+        ArrayList discoveredDevices = new ArrayList();
+        Set boundedDevices = BluetoothAdapter.getDefaultAdapter().getBondedDevices();
+        Iterator listDeviceName = boundedDevices.iterator();
+
+        while(listDeviceName.hasNext()) {
+            BluetoothDevice device = (BluetoothDevice)listDeviceName.next();
+            if(device.getName().contains(name)) {
+                return device.getAddress();
+            }
+        }
+        return name;
+    }
+
+    public String loadNamePrinter(){
+        return printerPreferences.loadNamePrinter();
+    }
+
+    public void clearDataBase() {
+        printerPreferences.savePrinterName(null);
+        printerPreferences.saveMacAddress(null);
+    }
+
+    public String loadMacAddress() {
+        return printerPreferences.loadMacAddress();
     }
 }

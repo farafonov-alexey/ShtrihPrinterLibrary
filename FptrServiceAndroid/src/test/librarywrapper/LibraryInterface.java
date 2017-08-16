@@ -12,10 +12,11 @@ public interface LibraryInterface {
     void addPrinter();
     String isSavedPrinterName();
     void clearSavedPrinterName();
-    void printFiscalCheck(ShtrihPrinterCallbackReceiver receiver, ShtrihPrinterInputData inputData);
-    void printRepeatedCheck(ShtrihPrinterCallbackReceiver receiver, ShtrihPrinterInputData inputData);
-    void printSlipCheck(ShtrihPrinterCallbackReceiver receiver, ShtrihPrinterInputData inputData);
-    void printReportX(ShtrihPrinterCallbackReceiver receiver);
-    void printReportZ(ShtrihPrinterCallbackReceiver receiver);
+    void printFiscalCheck(ShtrihPrinterInputData inputData);
+    void printRepeatedCheck(ShtrihPrinterInputData inputData);
+    void printSlipCheck(ShtrihPrinterInputData inputData);
+    void printReportX();
+    void printReportZ();
     void setSelectedDevice(String macAddress) throws Exception;
+    void setCallbackReceiver(ShtrihPrinterCallbackReceiver receiver);
 }

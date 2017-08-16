@@ -21,7 +21,9 @@ public class JposConfig {
 		LogbackConfig.configure(SysUtils.getFilesPath() + "tinyJavaPosTester.log");
 
 		copyAsset("jpos.xml", SysUtils.getFilesPath() + "jpos.xml", context);
-		String fileURL = "file://" + SysUtils.getFilesPath() + "jpos.xml";
+		String fileURL = "file://" +
+				SysUtils.getFilesPath()
+				+ "jpos.xml";
 		System.setProperty(
 				JposPropertiesConst.JPOS_POPULATOR_FILE_URL_PROP_NAME, fileURL);
 
@@ -40,8 +42,7 @@ public class JposConfig {
 		}
 	}
 
-	public static void copyAsset(String assetFileName, String destFile, Context context)
-			throws Exception {
+	public static void copyAsset(String assetFileName, String destFile, Context context) throws Exception {
 		InputStream is = null;
 		OutputStream os = null;
 		try {

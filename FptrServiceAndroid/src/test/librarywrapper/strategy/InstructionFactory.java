@@ -7,23 +7,24 @@ import org.jetbrains.annotations.Nullable;
 
 import test.librarywrapper.constants.PrintType;
 import test.librarywrapper.data.ShtrihPrinterInputData;
+import test.librarywrapper.enums.TypePrint;
 
 /**
  * Created by mamba on 12.08.2017.
  */
 
 public class InstructionFactory {
-    public static Instruction getInstruction(@NotNull ShtrihFiscalPrinter printer, @Nullable ShtrihPrinterInputData inputData, int printType){
-        switch(printType){
-            case PrintType.FISCAL_TRANSACTION:{
-                return new TransactionInstruction(printer, inputData, printType);
+    public static Instruction getInstruction(@NotNull ShtrihFiscalPrinter printer, @Nullable ShtrihPrinterInputData inputData, TypePrint typePrint){
+        switch(typePrint){
+            case FISCAL_TRANSACTION:{
+                return new TransactionInstruction(printer, inputData, typePrint);
             }
-            case PrintType.REPEAT_TRANSACTION:{
-                return new RepeatTransactionInstruction(printer, printType);
+            case REPEAT_TRANSACTION:{
+                return new RepeatTransactionInstruction(printer, typePrint);
             }
-            case PrintType.X_REPORT:
-            case PrintType.Z_REPORT:{
-                return new ZReportInstruction(printer, printType);
+            case X_REPORT:
+            case Z_REPORT:{
+                return new ZReportInstruction(printer, typePrint);
             }
             default:
                 return null;

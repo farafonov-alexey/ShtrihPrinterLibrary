@@ -3,6 +3,7 @@ package test.librarywrapper.strategy;
 import com.shtrih.fiscalprinter.ShtrihFiscalPrinter;
 
 import jpos.JposException;
+import test.librarywrapper.enums.TypePrint;
 
 /**
  * Created by mamba on 12.08.2017.
@@ -10,8 +11,8 @@ import jpos.JposException;
 
 public class RepeatTransactionInstruction extends Instruction {
 
-    public RepeatTransactionInstruction(ShtrihFiscalPrinter printer, int printType) {
-        super(printer, printType);
+    public RepeatTransactionInstruction(ShtrihFiscalPrinter printer, TypePrint typePrint) {
+        super(printer, typePrint);
     }
 
     @Override

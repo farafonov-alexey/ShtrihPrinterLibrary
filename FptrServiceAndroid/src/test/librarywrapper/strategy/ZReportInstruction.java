@@ -3,6 +3,7 @@ package test.librarywrapper.strategy;
 import com.shtrih.fiscalprinter.ShtrihFiscalPrinter;
 
 import jpos.JposException;
+import test.librarywrapper.enums.TypePrint;
 
 /**
  * Created by mamba on 12.08.2017.
@@ -10,8 +11,8 @@ import jpos.JposException;
 
 public class ZReportInstruction extends Instruction {
 
-    public ZReportInstruction(ShtrihFiscalPrinter printer, int printType) {
-        super(printer, printType);
+    public ZReportInstruction(ShtrihFiscalPrinter printer, TypePrint typePrint) {
+        super(printer, typePrint);
     }
 
     @Override

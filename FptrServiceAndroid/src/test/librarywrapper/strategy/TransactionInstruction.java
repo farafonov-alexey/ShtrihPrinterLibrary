@@ -8,6 +8,7 @@ import jpos.JposException;
 import test.librarywrapper.constants.ReceiptTemplateText;
 import test.librarywrapper.data.GoodsData;
 import test.librarywrapper.data.ShtrihPrinterInputData;
+import test.librarywrapper.enums.TypePrint;
 
 /**
  * Created by mamba on 12.08.2017.
@@ -16,8 +17,8 @@ import test.librarywrapper.data.ShtrihPrinterInputData;
 public class TransactionInstruction extends Instruction {
     private ShtrihPrinterInputData inputData;
 
-    public TransactionInstruction(ShtrihFiscalPrinter printer, ShtrihPrinterInputData inputData, int printType) {
-        super(printer, printType);
+    public TransactionInstruction(ShtrihFiscalPrinter printer, ShtrihPrinterInputData inputData, TypePrint typePrint) {
+        super(printer, typePrint);
         this.inputData = inputData;
     }
 

@@ -3,14 +3,14 @@ package test.librarywrapper.data;
 import java.util.ArrayList;
 import java.util.List;
 
-import test.librarywrapper.constants.OperationType;
+import test.librarywrapper.enums.PrinterOperationType;
 
 /**
  * Created by mamba on 10.08.2017.
  */
 
 public class ShtrihPrinterInputData {
-    private int operationType;
+    private PrinterOperationType operationType;
     private List<GoodsData> goodsData;
     private boolean cash;
     private ReceiptInformation receiptInformation;
@@ -18,14 +18,14 @@ public class ShtrihPrinterInputData {
     private ShtrihPrinterInputData() {
     }
 
-    public ShtrihPrinterInputData(int operationType, List<GoodsData> goodsData, boolean cash, ReceiptInformation receiptInformation) {
-        this.operationType = (operationType>3)||(operationType<1) ? OperationType.PAYMENT : operationType;
+    public ShtrihPrinterInputData(PrinterOperationType operationType, List<GoodsData> goodsData, boolean cash, ReceiptInformation receiptInformation) {
+        this.operationType = operationType;
         this.goodsData = (goodsData==null) ? new ArrayList<GoodsData>() : goodsData;
         this.cash = cash;
         this.receiptInformation = (receiptInformation!=null) ? receiptInformation : new ReceiptInformation.Builder().build();
     }
 
-    public int getOperationType() {
+    public PrinterOperationType getOperationType() {
         return operationType;
     }
 
@@ -41,8 +41,8 @@ public class ShtrihPrinterInputData {
         return receiptInformation;
     }
 
-    public void setOperationType(int operationType) {
-        this.operationType = (operationType>3)||(operationType<1) ? OperationType.PAYMENT : operationType;
+    public void setOperationType(PrinterOperationType operationType) {
+        this.operationType = operationType;
     }
 
     public void setGoodsData(List<GoodsData> goodsData) {

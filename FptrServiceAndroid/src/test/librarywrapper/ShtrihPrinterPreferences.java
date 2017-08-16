@@ -21,22 +21,6 @@ public class ShtrihPrinterPreferences {
             preferences = weakContext.get().getSharedPreferences(SettingsConstants.SHTRIH_PREFERENCES, Context.MODE_PRIVATE);
     }
 
-    public String getSettings(){
-        String settings = null;
-        if(preferences != null){
-            settings = preferences.getString(SettingsConstants.SHTRIH_SETTINGS, settings);
-        }
-        return settings;
-    }
-
-    public void setSettings(String settings){
-        if(preferences != null){
-            SharedPreferences.Editor editor = preferences.edit();
-            editor.putString(SettingsConstants.SHTRIH_SETTINGS, settings);
-            editor.apply();
-        }
-    }
-
     public void savePrinterName(String name){
         if (preferences != null) {
             SharedPreferences.Editor editor = preferences.edit();
@@ -49,6 +33,22 @@ public class ShtrihPrinterPreferences {
         String name = null;
         if(preferences != null){
             name = preferences.getString(SettingsConstants.SHTRIH_NAME_SAVED, null);
+        }
+        return name;
+    }
+
+    public void saveMacAddress(String devicesMacAddress) {
+        if (preferences != null) {
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putString(SettingsConstants.MAC_ADDRESS, devicesMacAddress);
+            editor.apply();
+        }
+    }
+
+    public String loadMacAddress() {
+        String name = null;
+        if(preferences != null){
+            name = preferences.getString(SettingsConstants.MAC_ADDRESS, null);
         }
         return name;
     }

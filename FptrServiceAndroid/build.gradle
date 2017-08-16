@@ -7,6 +7,7 @@ clean.doFirst {
 
 android {
     compileSdkVersion 25
+
     buildToolsVersion "25.0.2"
 
     defaultConfig {
@@ -64,6 +65,20 @@ android {
     lintOptions {
         abortOnError false
     }
+
+    libraryVariants.all { variant ->
+        def name = variant.buildType.name
+        if (name.equals(com.android.builder.core.BuilderConstants.DEBUG)) {
+            return; // Skip debug builds.
+        }
+        def task = project.tasks.create "jar${name.capitalize()}", Jar
+        task.dependsOn variant.javaCompile
+        task.from variant.javaCompile.destinationDir
+        task.exclude '**/BuildConfig.class'
+        task.exclude '**/R.class'
+        task.exclude '**/R$*.class'
+        artifacts.add('archives', task);
+    }
 }
 
 repositories {
@@ -89,3 +104,5 @@ dependencies {
     compile files('lib/zxing-core-3.2.2-javadoc.jar')
     compile 'com.google.guava:guava:19.0'
 }
+
+
