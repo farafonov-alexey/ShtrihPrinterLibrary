@@ -12,5 +12,5 @@ import com.shtrih.fiscalprinter.SMFiscalPrinter;
 
 public interface PrintItem {
 
-    public void print(SMFiscalPrinter printer) throws Exception;
+    void print(SMFiscalPrinter printer) throws Exception;
 }

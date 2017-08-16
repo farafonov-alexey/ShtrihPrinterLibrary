@@ -105,8 +105,7 @@ public class PrinterDate {
         if (month < date.getMonth()) return false;
         if (month > date.getMonth()) return true;
         if (day < date.getDay()) return false;
-        if (day > date.getDay()) return true;
-        return false;
+        return day > date.getDay();
     }
     
     public static boolean compare(PrinterDate date1, PrinterDate date2) {

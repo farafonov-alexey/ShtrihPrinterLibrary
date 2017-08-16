@@ -32,491 +32,491 @@ import com.shtrih.jpos.fiscalprinter.PrintItem;
 
 public interface SMFiscalPrinter {
 
-    public boolean getCapFSCloseReceipt();
+    boolean getCapFSCloseReceipt();
 
-    public boolean getCapFiscalStorage();
+    boolean getCapFiscalStorage();
 
-    public FptrParameters getParams();
+    FptrParameters getParams();
 
-    public void addEvents(IPrinterEvents item);
+    void addEvents(IPrinterEvents item);
 
-    public void removeEvents(IPrinterEvents item);
+    void removeEvents(IPrinterEvents item);
 
-    public void deviceExecute(PrinterCommand command) throws Exception;
+    void deviceExecute(PrinterCommand command) throws Exception;
 
-    public void connect() throws Exception;
+    void connect() throws Exception;
 
-    public void check(int errorCode) throws Exception;
+    void check(int errorCode) throws Exception;
 
-    public void execute(PrinterCommand command) throws Exception;
+    void execute(PrinterCommand command) throws Exception;
 
-    public int getSysPassword();
+    int getSysPassword();
 
-    public int getUsrPassword();
+    int getUsrPassword();
 
-    public int getTaxPassword();
+    int getTaxPassword();
 
-    public boolean failed(int errorCode);
+    boolean failed(int errorCode);
 
-    public boolean succeeded(int errorCode);
+    boolean succeeded(int errorCode);
 
-    public int executeCommand(PrinterCommand command) throws Exception;
+    int executeCommand(PrinterCommand command) throws Exception;
 
-    public void setTaxPassword(int taxPassword);
+    void setTaxPassword(int taxPassword);
 
-    public void setUsrPassword(int usrPassword);
+    void setUsrPassword(int usrPassword);
 
-    public void setSysPassword(int sysPassword);
+    void setSysPassword(int sysPassword);
 
-    public Beep beep() throws Exception;
+    Beep beep() throws Exception;
 
-    public int activateEJ() throws Exception;
+    int activateEJ() throws Exception;
 
-    public int printEJActivationReport() throws Exception;
+    int printEJActivationReport() throws Exception;
 
-    public int initEJArchive() throws Exception;
+    int initEJArchive() throws Exception;
 
-    public int testEJArchive() throws Exception;
+    int testEJArchive() throws Exception;
 
-    public int closeEJArchive() throws Exception;
+    int closeEJArchive() throws Exception;
 
-    public int cancelEJDocument() throws Exception;
+    int cancelEJDocument() throws Exception;
 
-    public int writeEJErrorCode(int errorCode) throws Exception;
+    int writeEJErrorCode(int errorCode) throws Exception;
 
-    public LongPrinterStatus readLongStatus() throws Exception;
+    LongPrinterStatus readLongStatus() throws Exception;
 
-    public LongPrinterStatus getLongStatus() throws Exception;
+    LongPrinterStatus getLongStatus() throws Exception;
 
-    public ShortPrinterStatus getShortStatus();
+    ShortPrinterStatus getShortStatus();
 
-    public ShortPrinterStatus readShortStatus() throws Exception;
+    ShortPrinterStatus readShortStatus() throws Exception;
 
-    public int printString(int station, String line) throws Exception;
+    int printString(int station, String line) throws Exception;
 
-    public int printBoldString(int station, String line) throws Exception;
+    int printBoldString(int station, String line) throws Exception;
 
-    public void feedPaper(int station, int lineNumber) throws Exception;
+    void feedPaper(int station, int lineNumber) throws Exception;
 
-    public int printStringFont(int station, FontNumber font, String line)
+    int printStringFont(int station, FontNumber font, String line)
             throws Exception;
 
-    public int printLine(int station, String line, FontNumber font)
+    int printLine(int station, String line, FontNumber font)
             throws Exception;
 
-    public String[] splitText(String text, int n, boolean wrap)
+    String[] splitText(String text, int n, boolean wrap)
             throws Exception;
 
-    public String[] splitText(String text, FontNumber font) throws Exception;
+    String[] splitText(String text, FontNumber font) throws Exception;
 
-    public void printText(int station, String text, FontNumber font)
+    void printText(int station, String text, FontNumber font)
             throws Exception;
 
-    public void printText(String text) throws Exception;
+    void printText(String text) throws Exception;
 
-    public int updateFieldInfo(int tableNumber, int fieldNumber)
+    int updateFieldInfo(int tableNumber, int fieldNumber)
             throws Exception;
 
-    public int writeTable(int tableNumber, int rowNumber, int fieldNumber,
-                          String fieldValue) throws Exception;
+    int writeTable(int tableNumber, int rowNumber, int fieldNumber,
+                   String fieldValue) throws Exception;
 
-    public String readTable(int tableNumber, int rowNumber, int fieldNumber)
+    String readTable(int tableNumber, int rowNumber, int fieldNumber)
             throws Exception;
 
-    public String readTable(String tableName, String fieldName)
+    String readTable(String tableName, String fieldName)
             throws Exception;
 
-    public int readTable(int tableNumber, int rowNumber, int fieldNumber,
-                         String[] fieldValue) throws Exception;
+    int readTable(int tableNumber, int rowNumber, int fieldNumber,
+                  String[] fieldValue) throws Exception;
 
-    public int readTableInfo(int tableNumber, Object[] out) throws Exception;
+    int readTableInfo(int tableNumber, Object[] out) throws Exception;
 
-    public ReadTableInfo readTableInfo(int tableNumber) throws Exception;
+    ReadTableInfo readTableInfo(int tableNumber) throws Exception;
 
-    public PrintCashIn printCashIn(long sum) throws Exception;
+    PrintCashIn printCashIn(long sum) throws Exception;
 
-    public PrintCashOut printCashOut(long sum) throws Exception;
+    PrintCashOut printCashOut(long sum) throws Exception;
 
-    public ContinuePrint continuePrint() throws Exception;
+    ContinuePrint continuePrint() throws Exception;
 
-    public BeginTest startTest(int runningPeriod) throws Exception;
+    BeginTest startTest(int runningPeriod) throws Exception;
 
-    public EndTest stopTest() throws Exception;
+    EndTest stopTest() throws Exception;
 
-    public VoidFiscalReceipt cancelReceipt() throws Exception;
+    VoidFiscalReceipt cancelReceipt() throws Exception;
 
-    public VoidFiscalReceipt cancelReceipt(int password) throws Exception;
+    VoidFiscalReceipt cancelReceipt(int password) throws Exception;
 
-    public EndFiscalReceipt closeReceipt(CloseRecParams params)
+    EndFiscalReceipt closeReceipt(CloseRecParams params)
             throws Exception;
 
-    public long getSubtotal() throws Exception;
+    long getSubtotal() throws Exception;
 
-    public int readOperationRegister(OperationRegister register)
+    int readOperationRegister(OperationRegister register)
             throws Exception;
 
-    public int readOperationRegister(int number) throws Exception;
+    int readOperationRegister(int number) throws Exception;
 
-    public int readCashRegister(CashRegister register) throws Exception;
+    int readCashRegister(CashRegister register) throws Exception;
 
-    public long readCashRegister(int number) throws Exception;
+    long readCashRegister(int number) throws Exception;
 
-    public long readCashRegisterCorrection(int number) throws Exception;
+    long readCashRegisterCorrection(int number) throws Exception;
 
-    public PrintEJDayReportOnDates printEJDayReportOnDates(EJDate date1,
-                                                           EJDate date2, int reportType) throws Exception;
+    PrintEJDayReportOnDates printEJDayReportOnDates(EJDate date1,
+                                                    EJDate date2, int reportType) throws Exception;
 
-    public PrintFMReportDates printFMReportDates(PrinterDate date1,
-                                                 PrinterDate date2, int reportType) throws Exception;
+    PrintFMReportDates printFMReportDates(PrinterDate date1,
+                                          PrinterDate date2, int reportType) throws Exception;
 
-    public PrintEJDayReportOnDays printEJReportDays(int day1, int day2,
-                                                    int reportType) throws Exception;
+    PrintEJDayReportOnDays printEJReportDays(int day1, int day2,
+                                             int reportType) throws Exception;
 
-    public PrintFMReportDays printFMReportDays(int day1, int day2,
-                                               int reportType) throws Exception;
+    PrintFMReportDays printFMReportDays(int day1, int day2,
+                                        int reportType) throws Exception;
 
-    public void printSale(PriceItem item) throws Exception;
+    void printSale(PriceItem item) throws Exception;
 
-    public void printVoidSale(PriceItem item) throws Exception;
+    void printVoidSale(PriceItem item) throws Exception;
 
-    public void printRefund(PriceItem item) throws Exception;
+    void printRefund(PriceItem item) throws Exception;
 
-    public void printVoidRefund(PriceItem item) throws Exception;
+    void printVoidRefund(PriceItem item) throws Exception;
 
-    public PrintVoidItem printVoidItem(PriceItem item) throws Exception;
+    PrintVoidItem printVoidItem(PriceItem item) throws Exception;
 
-    public PrintDiscount printDiscount(AmountItem item) throws Exception;
+    PrintDiscount printDiscount(AmountItem item) throws Exception;
 
-    public PrintVoidDiscount printVoidDiscount(AmountItem item)
+    PrintVoidDiscount printVoidDiscount(AmountItem item)
             throws Exception;
 
-    public PrintCharge printCharge(AmountItem item) throws Exception;
+    PrintCharge printCharge(AmountItem item) throws Exception;
 
-    public PrintVoidCharge printVoidCharge(AmountItem item) throws Exception;
+    PrintVoidCharge printVoidCharge(AmountItem item) throws Exception;
 
-    public ReadFMLastRecordDate readFMLastRecordDate() throws Exception;
+    ReadFMLastRecordDate readFMLastRecordDate() throws Exception;
 
-    public PrintXReport printXReport() throws Exception;
+    PrintXReport printXReport() throws Exception;
 
-    public PrintZReport printZReport() throws Exception;
+    PrintZReport printZReport() throws Exception;
 
-    public int printDepartmentReport() throws Exception;
+    int printDepartmentReport() throws Exception;
 
-    public int printTaxReport() throws Exception;
+    int printTaxReport() throws Exception;
 
-    public int printTotalizers() throws Exception;
+    int printTotalizers() throws Exception;
 
-    public int writeDate(PrinterDate date) throws Exception;
+    int writeDate(PrinterDate date) throws Exception;
 
-    public int confirmDate(PrinterDate date) throws Exception;
+    int confirmDate(PrinterDate date) throws Exception;
 
-    public void writeTime(PrinterTime time) throws Exception;
+    void writeTime(PrinterTime time) throws Exception;
 
-    public void writePortParams(int portNumber, int baudRate, int timeout)
+    void writePortParams(int portNumber, int baudRate, int timeout)
             throws Exception;
 
-    public void printBarcode(String barcode) throws Exception;
+    void printBarcode(String barcode) throws Exception;
 
-    public void duplicateReceipt() throws Exception;
+    void duplicateReceipt() throws Exception;
 
-    public void openReceipt(int receiptType) throws Exception;
+    void openReceipt(int receiptType) throws Exception;
 
-    public void loadGraphics(int lineNumber, int lineCount, byte[] data)
+    void loadGraphics(int lineNumber, int lineCount, byte[] data)
             throws Exception;
 
-    public int loadGraphics1(int lineNumber, byte[] data) throws Exception;
+    int loadGraphics1(int lineNumber, byte[] data) throws Exception;
 
-    public int loadGraphics2(int lineNumber, byte[] data) throws Exception;
+    int loadGraphics2(int lineNumber, byte[] data) throws Exception;
 
-    public int printGraphics1(int line1, int line2) throws Exception;
+    int printGraphics1(int line1, int line2) throws Exception;
 
-    public void endDump() throws Exception;
+    void endDump() throws Exception;
 
-    public int printGraphics2(int line1, int line2) throws Exception;
+    int printGraphics2(int line1, int line2) throws Exception;
 
     int getMaxGraphicsWidth() throws Exception;
 
     int loadRawGraphics(byte[][] data) throws Exception;
 
-    public void printGraphics(int line1, int line2) throws Exception;
+    void printGraphics(int line1, int line2) throws Exception;
 
-    public int printGraphicLine(int height, byte[] data) throws Exception;
+    int printGraphicLine(int height, byte[] data) throws Exception;
 
-    public int cutPaper(int cutType) throws Exception;
+    int cutPaper(int cutType) throws Exception;
 
-    public void cutPaper() throws Exception;
+    void cutPaper() throws Exception;
 
-    public void openCashDrawer(int drawerNumber) throws Exception;
+    void openCashDrawer(int drawerNumber) throws Exception;
 
-    public boolean checkEcrMode(int mode) throws Exception;
+    boolean checkEcrMode(int mode) throws Exception;
 
-    public PrinterStatus waitForPrinting() throws Exception;
+    PrinterStatus waitForPrinting() throws Exception;
 
-    public int[] getSupportedBaudRates() throws Exception;
+    int[] getSupportedBaudRates() throws Exception;
 
-    public boolean tryCancelReceipt(int password) throws Exception;
+    boolean tryCancelReceipt(int password) throws Exception;
 
-    public void writeDecimalPoint(int position) throws Exception;
+    void writeDecimalPoint(int position) throws Exception;
 
-    public void resetFM() throws Exception;
+    void resetFM() throws Exception;
 
-    public void sysAdminCancelReceipt() throws Exception;
+    void sysAdminCancelReceipt() throws Exception;
 
-    public int getBaudRateIndex(int value) throws Exception;
+    int getBaudRateIndex(int value) throws Exception;
 
-    public void setBaudRate(int baudRate) throws Exception;
+    void setBaudRate(int baudRate) throws Exception;
 
-    public boolean connectDevice(int baudRate, int deviceBaudRate,
-                                 int deviceByteTimeout) throws Exception;
+    boolean connectDevice(int baudRate, int deviceBaudRate,
+                          int deviceByteTimeout) throws Exception;
 
-    public void checkBaudRate(int value) throws Exception;
+    void checkBaudRate(int value) throws Exception;
 
-    public void closePort() throws Exception;
+    void closePort() throws Exception;
 
-    public void writeTables(PrinterTables tables) throws Exception;
+    void writeTables(PrinterTables tables) throws Exception;
 
-    public void writeFields(PrinterFields fields) throws Exception;
+    void writeFields(PrinterFields fields) throws Exception;
 
-    public PrinterTable getTable(int tableNumber) throws Exception;
+    PrinterTable getTable(int tableNumber) throws Exception;
 
-    public boolean isValidField(PrinterField field)
+    boolean isValidField(PrinterField field)
             throws Exception;
 
-    public void readTables(PrinterTables tables) throws Exception;
+    void readTables(PrinterTables tables) throws Exception;
 
-    public PrinterStatus readShortPrinterStatus() throws Exception;
+    PrinterStatus readShortPrinterStatus() throws Exception;
 
-    public PrinterStatus readLongPrinterStatus() throws Exception;
+    PrinterStatus readLongPrinterStatus() throws Exception;
 
-    public PrinterStatus readPrinterStatus() throws Exception;
+    PrinterStatus readPrinterStatus() throws Exception;
 
-    public int readDeviceMetrics() throws Exception;
+    int readDeviceMetrics() throws Exception;
 
-    public DeviceMetrics getDeviceMetrics();
+    DeviceMetrics getDeviceMetrics();
 
-    public void initialize() throws Exception;
+    void initialize() throws Exception;
 
-    public boolean getWrapText();
+    boolean getWrapText();
 
-    public void setWrapText(boolean value);
+    void setWrapText(boolean value);
 
-    public void checkPaper(PrinterStatus status) throws Exception;
+    void checkPaper(PrinterStatus status) throws Exception;
 
-    public int bufferZReport() throws Exception;
+    int bufferZReport() throws Exception;
 
-    public int printBufferedZReport() throws Exception;
+    int printBufferedZReport() throws Exception;
 
-    public int printTrailer() throws Exception;
+    int printTrailer() throws Exception;
 
-    public int printHeader() throws Exception;
+    int printHeader() throws Exception;
 
-    public int initTables() throws Exception;
+    int initTables() throws Exception;
 
-    public void readTable(PrinterTable table) throws Exception;
+    void readTable(PrinterTable table) throws Exception;
 
-    public int writeField(PrinterField field) throws Exception;
+    int writeField(PrinterField field) throws Exception;
 
-    public void writeField2(PrinterField field) throws Exception;
+    void writeField2(PrinterField field) throws Exception;
 
-    public PrinterField readField(PrinterField field) throws Exception;
+    PrinterField readField(PrinterField field) throws Exception;
 
-    public int stopEJPrint() throws Exception;
+    int stopEJPrint() throws Exception;
 
-    public int printEJDocument(int macNumber) throws Exception;
+    int printEJDocument(int macNumber) throws Exception;
 
-    public int printEJDayReport(int dayNumber) throws Exception;
+    int printEJDayReport(int dayNumber) throws Exception;
 
-    public int printEJDayTotal(int dayNumber) throws Exception;
+    int printEJDayTotal(int dayNumber) throws Exception;
 
-    public int readEJDayReport(int dayNumber) throws Exception;
+    int readEJDayReport(int dayNumber) throws Exception;
 
-    public int readEJDayTotals(int dayNumber) throws Exception;
+    int readEJDayTotals(int dayNumber) throws Exception;
 
-    public void writeParameter(String paramName, int value) throws Exception;
+    void writeParameter(String paramName, int value) throws Exception;
 
-    public void writeParameter(String paramName, boolean value) throws Exception;
+    void writeParameter(String paramName, boolean value) throws Exception;
 
-    public void writeParameter(String paramName, String value) throws Exception;
+    void writeParameter(String paramName, String value) throws Exception;
 
-    public String readParameter(String paramName) throws Exception;
+    String readParameter(String paramName) throws Exception;
 
-    public int readIntParameter(String paramName) throws Exception;
+    int readIntParameter(String paramName) throws Exception;
 
-    public void printBarcode(PrinterBarcode barcode) throws Exception;
+    void printBarcode(PrinterBarcode barcode) throws Exception;
 
-    public void sleep(long millis);
+    void sleep(long millis);
 
-    public PrinterImages getPrinterImages();
+    PrinterImages getPrinterImages();
 
-    public String processEscCommands(String text)
+    String processEscCommands(String text)
             throws Exception;
 
-    public int getLineHeight(FontNumber font) throws Exception;
+    int getLineHeight(FontNumber font) throws Exception;
 
-    public int getLineSpacing() throws Exception;
+    int getLineSpacing() throws Exception;
 
-    public void checkImageSize(int firstLine, int imageWidth, int imageHeight)
+    void checkImageSize(int firstLine, int imageWidth, int imageHeight)
             throws Exception;
 
-    public int readLicense(String[] license) throws Exception;
+    int readLicense(String[] license) throws Exception;
 
-    public void printSeparator(int separatorType, int height) throws Exception;
+    void printSeparator(int separatorType, int height) throws Exception;
 
-    public int getPrintWidth() throws Exception;
+    int getPrintWidth() throws Exception;
 
-    public FlexCommands getCommands() throws Exception;
+    FlexCommands getCommands() throws Exception;
 
-    public int getCommandTimeout(int code) throws Exception;
+    int getCommandTimeout(int code) throws Exception;
 
-    public int getResultCode();
+    int getResultCode();
 
-    public String getResultText();
+    String getResultText();
 
-    public ReadEJActivationReport readEJActivationReport() throws Exception;
+    ReadEJActivationReport readEJActivationReport() throws Exception;
 
-    public ReadEJStatus readEJStatus() throws Exception;
+    ReadEJStatus readEJStatus() throws Exception;
 
-    public String[] readEJActivationText(int maxCount) throws Exception;
+    String[] readEJActivationText(int maxCount) throws Exception;
 
-    public FMTotals readFMTotals(int mode) throws Exception;
+    FMTotals readFMTotals(int mode) throws Exception;
 
-    public FMTotals readFPTotals(int mode) throws Exception;
+    FMTotals readFPTotals(int mode) throws Exception;
 
-    public FMTotals readFSTotals() throws Exception;
+    FMTotals readFSTotals() throws Exception;
 
-    public void setEscPrinter(NCR7167Printer escPrinter);
+    void setEscPrinter(NCR7167Printer escPrinter);
 
-    public int beginFiscalDay() throws Exception;
+    int beginFiscalDay() throws Exception;
 
-    public ReceiptImages getReceiptImages();
+    ReceiptImages getReceiptImages();
 
-    public void printReceiptImage(int position) throws Exception;
+    void printReceiptImage(int position) throws Exception;
 
-    public PrinterImage getPrinterImage(int position) throws Exception;
+    PrinterImage getPrinterImage(int position) throws Exception;
 
-    public void printImage(PrinterImage image) throws Exception;
+    void printImage(PrinterImage image) throws Exception;
 
-    public void loadImage(PrinterImage image, boolean addImage) throws Exception;
+    void loadImage(PrinterImage image, boolean addImage) throws Exception;
 
-    public void printBlankSpace(int height) throws Exception;
+    void printBlankSpace(int height) throws Exception;
 
-    public void waitForFiscalMemory() throws Exception;
+    void waitForFiscalMemory() throws Exception;
 
-    public void waitForElectronicJournal() throws Exception;
+    void waitForElectronicJournal() throws Exception;
 
-    public ReadCashRegister readCashRegister2(int number) throws Exception;
+    ReadCashRegister readCashRegister2(int number) throws Exception;
 
-    public ReadOperationRegister readOperationRegister2(int number)
+    ReadOperationRegister readOperationRegister2(int number)
             throws Exception;
 
-    public String getErrorText(int code) throws Exception;
+    String getErrorText(int code) throws Exception;
 
-    public void openFiscalDay() throws Exception;
+    void openFiscalDay() throws Exception;
 
-    public int fsWriteTag(int tagId, String tagValue) throws Exception;
+    int fsWriteTag(int tagId, String tagValue) throws Exception;
 
-    public int fsWriteTag1162(int catId, long groupId, String itemId)
+    int fsWriteTag1162(int catId, long groupId, String itemId)
             throws Exception;
 
-    public int fsWriteTLV(byte[] tlv) throws Exception;
+    int fsWriteTLV(byte[] tlv) throws Exception;
 
-    public byte[] getTLVData(int tagId, String tagValue) throws Exception;
+    byte[] getTLVData(int tagId, String tagValue) throws Exception;
 
-    public FSReadStatus fsReadStatus() throws Exception;
+    FSReadStatus fsReadStatus() throws Exception;
 
-    public FSReadDayParameters fsReadDayParameters() throws Exception;
+    FSReadDayParameters fsReadDayParameters() throws Exception;
 
-    public boolean isFiscalized() throws Exception;
+    boolean isFiscalized() throws Exception;
 
-    public int readDayNumber() throws Exception;
+    int readDayNumber() throws Exception;
 
-    public int readDocNumber() throws Exception;
+    int readDocNumber() throws Exception;
 
-    public void writeCasierName(String name) throws Exception;
+    void writeCasierName(String name) throws Exception;
 
-    public void writeAdminName(String name) throws Exception;
+    void writeAdminName(String name) throws Exception;
 
-    public void disablePrint() throws Exception;
+    void disablePrint() throws Exception;
 
-    public FSReadFiscalization fsReadFiscalization() throws Exception;
+    FSReadFiscalization fsReadFiscalization() throws Exception;
 
-    public FSReadCommStatus fsReadCommStatus() throws Exception;
+    FSReadCommStatus fsReadCommStatus() throws Exception;
 
-    public void startSaveCommands();
+    void startSaveCommands();
 
-    public void stopSaveCommands();
+    void stopSaveCommands();
 
-    public void clearReceiptCommands();
+    void clearReceiptCommands();
 
-    public int printReceiptCommands() throws Exception;
+    int printReceiptCommands() throws Exception;
 
-    public int fsReceiptDiscount(FSReceiptDiscount command) throws Exception;
+    int fsReceiptDiscount(FSReceiptDiscount command) throws Exception;
 
-    public String getDepartmentName(int number) throws Exception;
+    String getDepartmentName(int number) throws Exception;
 
-    public String getTaxName(int number) throws Exception;
+    String getTaxName(int number) throws Exception;
 
-    public int getTaxRate(int number) throws Exception;
+    int getTaxRate(int number) throws Exception;
 
-    public int getDiscountMode() throws Exception;
+    int getDiscountMode() throws Exception;
 
-    public int printDocHeader(String title, int number) throws Exception;
+    int printDocHeader(String title, int number) throws Exception;
 
-    public void printLines(String line1, String line2) throws Exception;
+    void printLines(String line1, String line2) throws Exception;
 
-    public void printItems(Vector<PrintItem> items) throws Exception;
+    void printItems(Vector<PrintItem> items) throws Exception;
 
-    public void printFSHeader() throws Exception;
+    void printFSHeader() throws Exception;
 
-    public PrinterModel getModel() throws Exception;
+    PrinterModel getModel() throws Exception;
 
-    public boolean getCapOpenReceipt() throws Exception;
+    boolean getCapOpenReceipt() throws Exception;
 
-    public FSReadSerial fsReadSerial() throws Exception;
+    FSReadSerial fsReadSerial() throws Exception;
 
-    public String readFullSerial() throws Exception;
+    String readFullSerial() throws Exception;
 
-    public FSReadExpDate fsReadExpDate() throws Exception;
+    FSReadExpDate fsReadExpDate() throws Exception;
 
-    public void checkDiscountMode(int mode) throws Exception;
+    void checkDiscountMode(int mode) throws Exception;
 
-    public void printReceiptHeader(String docName) throws Exception;
+    void printReceiptHeader(String docName) throws Exception;
 
-    public String getReceiptName(int receiptType);
+    String getReceiptName(int receiptType);
 
     byte[] fsReadBlockData() throws Exception;
 
     void fsWriteBlockData(byte[] data) throws Exception;
 
-    public Vector<FSTicket> fsReadTickets(int[] fsDocumentNumbers) throws Exception;
+    Vector<FSTicket> fsReadTickets(int[] fsDocumentNumbers) throws Exception;
 
-    public Vector<FSTicket> fsReadTickets(int firstFSDocumentNumber, int documentCount) throws Exception;
+    Vector<FSTicket> fsReadTickets(int firstFSDocumentNumber, int documentCount) throws Exception;
 
-    public int fsPrintCorrectionReceipt(FSPrintCorrectionReceipt command) throws Exception;
+    int fsPrintCorrectionReceipt(FSPrintCorrectionReceipt command) throws Exception;
 
-    public int fsPrintCorrectionReceipt2(FSPrintCorrectionReceipt2 command) throws Exception;
+    int fsPrintCorrectionReceipt2(FSPrintCorrectionReceipt2 command) throws Exception;
 
-    public boolean getCapDisableDiscountText();
+    boolean getCapDisableDiscountText();
 
-    public int getMessageLength() throws Exception;
+    int getMessageLength() throws Exception;
 
-    public int getMessageLength(FontNumber font) throws Exception;
+    int getMessageLength(FontNumber font) throws Exception;
 
-    public boolean isSubtotalInHeader();
+    boolean isSubtotalInHeader();
 
-    public boolean isDiscountInHeader();
+    boolean isDiscountInHeader();
 
-    public int reboot() throws Exception;
+    int reboot() throws Exception;
 
-    public FDOParameters readFDOParameters() throws Exception;
+    FDOParameters readFDOParameters() throws Exception;
 
-    public String ReadRnm() throws Exception;
+    String ReadRnm() throws Exception;
 
-    public int getHeaderHeight() throws Exception;
+    int getHeaderHeight() throws Exception;
 
-    public boolean getCapDiscount();
+    boolean getCapDiscount();
 
-    public FSFindDocument fsFindDocument(long docNumber) throws Exception;
+    FSFindDocument fsFindDocument(long docNumber) throws Exception;
 
     boolean capReadFSBuffer() throws Exception;
 

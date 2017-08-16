@@ -1940,10 +1940,10 @@ public class ShtrihFiscalPrinter113 implements BaseControl,
         Long[] object = new Long[4];
         directIO(SmFptrConst.SMFPTR_DIO_READ_TOTALS, data, object);
 
-        totals[0] = (Long) object[0];
-        totals[1] = (Long) object[1];
-        totals[2] = (Long) object[2];
-        totals[3] = (Long) object[3];
+        totals[0] = object[0];
+        totals[1] = object[1];
+        totals[2] = object[2];
+        totals[3] = object[3];
     }
 
     public FSDocumentInfo fsFindDocument(int documentNumber) throws Exception {

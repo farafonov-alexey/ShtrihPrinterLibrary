@@ -775,14 +775,7 @@ final public class RXTXPort extends SerialPort
 		if( debug_events && debug_verbose )
 			z.reportln(  "	sendEvent return" );
 
-		if (fd == 0 ||  SPEventListener == null || monThread == null) 
-		{
-			return(true);
-		}
-		else 
-		{
-			return(false);  
-		}
+        return fd == 0 || SPEventListener == null || monThread == null;
 	}
 
 	/**
@@ -1652,7 +1645,7 @@ Documentation is at http://java.sun.com/products/jdk/1.2/docs/api/java/io/InputS
 	*  A dummy method added so RXTX compiles on Kaffee
 	*  @deprecated deprecated but used in Kaffe 
 	*/
-	public void setRcvFifoTrigger(int trigger){};  
+	public void setRcvFifoTrigger(int trigger){}
 
 /*------------------------  END OF CommAPI -----------------------------*/
 

@@ -17,6 +17,6 @@ package com.shtrih.fiscalprinter;
 import com.shtrih.fiscalprinter.command.PrinterCommand;
 
 public interface PrinterProtocol {
-	public void connect() throws Exception;
-	public void send(PrinterCommand command) throws Exception;
+	void connect() throws Exception;
+	void send(PrinterCommand command) throws Exception;
 }

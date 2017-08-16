@@ -18,9 +18,9 @@ import jpos.JposException;
 import jpos.JposStatisticsConst;
 
 public interface JposStatistics extends JposStatisticsConst {
-    public void reset(String statisticsBuffer) throws JposException;
+    void reset(String statisticsBuffer) throws JposException;
 
-    public void update(String statisticsBuffer) throws JposException;
+    void update(String statisticsBuffer) throws JposException;
 
-    public void retrieve(String[] statisticsBuffer) throws JposException;
+    void retrieve(String[] statisticsBuffer) throws JposException;
 }

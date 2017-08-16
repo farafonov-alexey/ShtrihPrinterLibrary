@@ -15,10 +15,10 @@ package com.shtrih.fiscalprinter.command;
 
 public interface IPrinterEvents 
 {
-    public void init();
+    void init();
 
-    public void done();
-    public void afterCommand(PrinterCommand command);
-    public void beforeCommand(PrinterCommand command);
-    public void printerStatusRead(PrinterStatus status);
+    void done();
+    void afterCommand(PrinterCommand command);
+    void beforeCommand(PrinterCommand command);
+    void printerStatusRead(PrinterStatus status);
 }

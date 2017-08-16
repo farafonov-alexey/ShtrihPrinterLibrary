@@ -54,7 +54,7 @@ public class CommandInputStream {
 
     public int byteToInt(int B) {
         if (B < 0) {
-            B = (int) (256 + B);
+            B = 256 + B;
         }
         return B;
     }

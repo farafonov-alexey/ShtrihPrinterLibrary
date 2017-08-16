@@ -107,12 +107,11 @@ class CommPortEnumerator implements Enumeration
 ------------------------------------------------------------------------------*/
 	public boolean hasMoreElements()
 	{
-		if(debug) System.out.println("CommPortEnumerator:hasMoreElements() " + CommPortIdentifier.CommPortIndex == null ? false : true );
+		if(debug) System.out.println("CommPortEnumerator:hasMoreElements() " + CommPortIdentifier.CommPortIndex != null);
 		synchronized (CommPortIdentifier.Sync)
 		{
-			if(index != null) return index.next == null ? false : true;
-			else return CommPortIdentifier.CommPortIndex == null ?
-				false : true;
+			if(index != null) return index.next != null;
+			else return CommPortIdentifier.CommPortIndex != null;
 		}
 	}
 }

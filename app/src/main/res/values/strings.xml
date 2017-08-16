@@ -11,4 +11,6 @@
     <string name="action_print_z_report">печать Z отчёта</string>
     <string name="action_print_duplicate_receipt">печать дубликата</string>
     <string name="shtrih_printing_status">статус</string>
+    <string name="connect_printer">подключить принтер</string>
+    <string name="action_print_x_report">печать X отчёта</string>
 </resources>

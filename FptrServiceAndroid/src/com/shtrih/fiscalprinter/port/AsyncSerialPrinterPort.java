@@ -182,7 +182,6 @@ public class AsyncSerialPrinterPort implements Runnable, PrinterPort
             if ((currentTime - startTime) > timeout) {
                 noConnectionError();
             }
-            //Thread.sleep(1);
         }
     }
 

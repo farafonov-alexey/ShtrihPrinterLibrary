@@ -229,51 +229,51 @@ public interface PrinterModel
 
     boolean getCapCashOutAutoCut();
 
-    public void setCapCashOutAutoCut(boolean capCashOutAutoCut);
+    void setCapCashOutAutoCut(boolean capCashOutAutoCut);
 
-    public void setCapCashInAutoCut(boolean capCashInAutoCut);
+    void setCapCashInAutoCut(boolean capCashInAutoCut);
 
-    public boolean isCommandSupported(int code);
+    boolean isCommandSupported(int code);
 
-    public boolean getCapPrintBarcode2();
+    boolean getCapPrintBarcode2();
 
-    public boolean getCapBarcodeSupported(int barcodeType);
+    boolean getCapBarcodeSupported(int barcodeType);
     
-    public void setCapPrintBarcode2(boolean value);
+    void setCapPrintBarcode2(boolean value);
     
-    public int getDeviceFontNormal();
+    int getDeviceFontNormal();
     
-    public int getDeviceFontDouble();
+    int getDeviceFontDouble();
     
-    public int getDeviceFontSmall();
+    int getDeviceFontSmall();
     
-    public void setDeviceFontNormal(int value);
+    void setDeviceFontNormal(int value);
     
-    public void setDeviceFontDouble(int value);
+    void setDeviceFontDouble(int value);
     
-    public void setDeviceFontSmall(int value);
+    void setDeviceFontSmall(int value);
     
     boolean getSwapGraphicsLine();
     
-    public void setSwapGraphicsLine(boolean value);
+    void setSwapGraphicsLine(boolean value);
     
-    public int getMinCashRegister();
+    int getMinCashRegister();
     
-    public int getMaxCashRegister();
+    int getMaxCashRegister();
     
-    public int getMinCashRegister2();
+    int getMinCashRegister2();
     
-    public int getMaxCashRegister2();
+    int getMaxCashRegister2();
     
-    public int getMinOperationRegister();
+    int getMinOperationRegister();
     
-    public int getMaxOperationRegister();
+    int getMaxOperationRegister();
     
-    public boolean getCapGraphicsLineMargin();
+    boolean getCapGraphicsLineMargin();
     
-    public int getPrintWidth();
+    int getPrintWidth();
     
-    public void setPrintWidth(int value);
+    void setPrintWidth(int value);
 
     boolean getCapFSCloseCheck();
 

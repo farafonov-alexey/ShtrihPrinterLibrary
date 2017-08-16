@@ -22,7 +22,9 @@ public class InstructionFactory {
             case REPEAT_TRANSACTION:{
                 return new RepeatTransactionInstruction(printer, typePrint);
             }
-            case X_REPORT:
+            case X_REPORT:{
+                return new XReportInstruction(printer, typePrint);
+            }
             case Z_REPORT:{
                 return new ZReportInstruction(printer, typePrint);
             }

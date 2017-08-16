@@ -277,10 +277,7 @@ public class XmlModelsReader {
             return defaultValue;
         }
 
-        if (paramValue.equalsIgnoreCase("0")) {
-            return false;
-        }
-        
-        return true;
+        return !paramValue.equalsIgnoreCase("0");
+
     }
 }

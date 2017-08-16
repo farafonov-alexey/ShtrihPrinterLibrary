@@ -57,7 +57,7 @@ public class RegisterReportReader {
             }
         }
         for (int i = 0; i < 4; i++) {
-            CashRegister register = (CashRegister) cashRegisters.get(185 + i);
+            CashRegister register = cashRegisters.get(185 + i);
             long itemsDiscountAmount = getDayTotals(i, cashRegisters)
                     - getDayPayments(i, cashRegisters);
             register.setValue(itemsDiscountAmount);

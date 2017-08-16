@@ -18,169 +18,169 @@ import com.shtrih.jpos.fiscalprinter.request.PrintRecItemVoidRequest;
 
 public interface FiscalPrinterFilter113 {
 
-    public void beginFiscalDocument(int documentAmount) throws Exception;
+    void beginFiscalDocument(int documentAmount) throws Exception;
 
-    public void beginFiscalReceipt(boolean printHeader) throws Exception;
+    void beginFiscalReceipt(boolean printHeader) throws Exception;
 
-    public void beginFixedOutput(int station, int documentType)
+    void beginFixedOutput(int station, int documentType)
             throws Exception;
 
-    public void beginInsertion(int timeout) throws Exception;
+    void beginInsertion(int timeout) throws Exception;
 
-    public void beginItemList(int vatID) throws Exception;
+    void beginItemList(int vatID) throws Exception;
 
-    public void beginNonFiscal() throws Exception;
+    void beginNonFiscal() throws Exception;
 
-    public void beginRemoval(int timeout) throws Exception;
+    void beginRemoval(int timeout) throws Exception;
 
-    public void beginTraining() throws Exception;
+    void beginTraining() throws Exception;
 
-    public void clearError() throws Exception;
+    void clearError() throws Exception;
 
-    public void clearOutput() throws Exception;
+    void clearOutput() throws Exception;
 
-    public void endFiscalDocument() throws Exception;
+    void endFiscalDocument() throws Exception;
 
-    public void endFiscalReceipt(boolean printHeader) throws Exception;
+    void endFiscalReceipt(boolean printHeader) throws Exception;
 
-    public void endFixedOutput() throws Exception;
+    void endFixedOutput() throws Exception;
 
-    public void endInsertion() throws Exception;
+    void endInsertion() throws Exception;
 
-    public void endItemList() throws Exception;
+    void endItemList() throws Exception;
 
-    public void endNonFiscal() throws Exception;
+    void endNonFiscal() throws Exception;
 
-    public void endRemoval() throws Exception;
+    void endRemoval() throws Exception;
 
-    public void endTraining() throws Exception;
+    void endTraining() throws Exception;
 
-    public void getData(int dataItem, int[] optArgs, String[] data)
+    void getData(int dataItem, int[] optArgs, String[] data)
             throws Exception;
 
-    public void getDate(String[] Date) throws Exception;
+    void getDate(String[] Date) throws Exception;
 
-    public void getTotalizer(int vatID, int optArgs, String[] data)
+    void getTotalizer(int vatID, int optArgs, String[] data)
             throws Exception;
 
-    public void getVatEntry(int vatID, int optArgs, int[] vatRate)
+    void getVatEntry(int vatID, int optArgs, int[] vatRate)
             throws Exception;
 
-    public void printDuplicateReceipt() throws Exception;
+    void printDuplicateReceipt() throws Exception;
 
-    public void printFiscalDocumentLine(String documentLine) throws Exception;
+    void printFiscalDocumentLine(String documentLine) throws Exception;
 
-    public void printFixedOutput(int documentType, int lineNumber, String data)
+    void printFixedOutput(int documentType, int lineNumber, String data)
             throws Exception;
 
-    public void printNormal(int station, String data) throws Exception;
+    void printNormal(int station, String data) throws Exception;
 
-    public void printPeriodicTotalsReport(String date1, String date2)
+    void printPeriodicTotalsReport(String date1, String date2)
             throws Exception;
 
-    public void printPowerLossReport() throws Exception;
+    void printPowerLossReport() throws Exception;
 
-    public void printRecItem(String description, long price, int quantity,
-            int vatInfo, long unitPrice, String unitName) throws Exception;
+    void printRecItem(String description, long price, int quantity,
+                      int vatInfo, long unitPrice, String unitName) throws Exception;
 
-    public void printRecMessage(String message) throws Exception;
+    void printRecMessage(String message) throws Exception;
 
-    public void printRecNotPaid(String description, long amount)
+    void printRecNotPaid(String description, long amount)
             throws Exception;
 
-    public void printRecRefund(String description, long amount, int vatInfo)
+    void printRecRefund(String description, long amount, int vatInfo)
             throws Exception;
 
-    public void printRecSubtotal(long amount) throws Exception;
+    void printRecSubtotal(long amount) throws Exception;
 
-    public void printRecSubtotalAdjustment(int adjustmentType,
-            String description, long amount) throws Exception;
+    void printRecSubtotalAdjustment(int adjustmentType,
+                                    String description, long amount) throws Exception;
 
-    public void printRecTotal(long total, long payment, String description)
+    void printRecTotal(long total, long payment, String description)
             throws Exception;
 
-    public void printRecVoid(String description) throws Exception;
+    void printRecVoid(String description) throws Exception;
 
-    public void printRecVoidItem(String description, long amount, int quantity,
-            int adjustmentType, long adjustment, int vatInfo) throws Exception;
+    void printRecVoidItem(String description, long amount, int quantity,
+                          int adjustmentType, long adjustment, int vatInfo) throws Exception;
 
-    public void printReport(int reportType, String startNum, String endNum)
+    void printReport(int reportType, String startNum, String endNum)
             throws Exception;
 
-    public void printXReport() throws Exception;
+    void printXReport() throws Exception;
 
-    public void printZReport() throws Exception;
+    void printZReport() throws Exception;
 
-    public void resetPrinter() throws Exception;
+    void resetPrinter() throws Exception;
 
-    public void setDate(String date) throws Exception;
+    void setDate(String date) throws Exception;
 
-    public void setHeaderLine(int lineNumber, String text, boolean doubleWidth)
+    void setHeaderLine(int lineNumber, String text, boolean doubleWidth)
             throws Exception;
 
-    public void setPOSID(String POSID, String cashierID) throws Exception;
+    void setPOSID(String POSID, String cashierID) throws Exception;
 
-    public void setStoreFiscalID(String ID) throws Exception;
+    void setStoreFiscalID(String ID) throws Exception;
 
-    public void setTrailerLine(int lineNumber, String text, boolean doubleWidth)
+    void setTrailerLine(int lineNumber, String text, boolean doubleWidth)
             throws Exception;
 
-    public void setVatTable() throws Exception;
+    void setVatTable() throws Exception;
 
-    public void setVatValue(int vatID, String vatValue) throws Exception;
+    void setVatValue(int vatID, String vatValue) throws Exception;
 
-    public void verifyItem(String itemName, int vatID) throws Exception;
+    void verifyItem(String itemName, int vatID) throws Exception;
 
-    public void setCurrency(int newCurrency) throws Exception;
+    void setCurrency(int newCurrency) throws Exception;
 
-    public void printRecCash(long amount) throws Exception;
+    void printRecCash(long amount) throws Exception;
 
-    public void printRecItemFuel(String description, long price, int quantity,
-            int vatInfo, long unitPrice, String unitName, long specialTax,
-            String specialTaxName) throws Exception;
+    void printRecItemFuel(String description, long price, int quantity,
+                          int vatInfo, long unitPrice, String unitName, long specialTax,
+                          String specialTaxName) throws Exception;
 
-    public void printRecItemFuelVoid(String description, long price,
-            int vatInfo, long specialTax) throws Exception;
+    void printRecItemFuelVoid(String description, long price,
+                              int vatInfo, long specialTax) throws Exception;
 
-    public void printRecPackageAdjustment(int adjustmentType,
-            String description, String vatAdjustment) throws Exception;
+    void printRecPackageAdjustment(int adjustmentType,
+                                   String description, String vatAdjustment) throws Exception;
 
-    public void printRecPackageAdjustVoid(int adjustmentType,
-            String vatAdjustment) throws Exception;
+    void printRecPackageAdjustVoid(int adjustmentType,
+                                   String vatAdjustment) throws Exception;
 
-    public void printRecRefundVoid(String description, long amount, int vatInfo)
+    void printRecRefundVoid(String description, long amount, int vatInfo)
             throws Exception;
 
-    public void printRecSubtotalAdjustVoid(int adjustmentType, long amount)
+    void printRecSubtotalAdjustVoid(int adjustmentType, long amount)
             throws Exception;
 
-    public void printRecTaxID(String taxID) throws Exception;
+    void printRecTaxID(String taxID) throws Exception;
 
-    public void resetStatistics(String statisticsBuffer) throws Exception;
+    void resetStatistics(String statisticsBuffer) throws Exception;
 
-    public void retrieveStatistics(String[] statisticsBuffer) throws Exception;
+    void retrieveStatistics(String[] statisticsBuffer) throws Exception;
 
-    public void updateStatistics(String statisticsBuffer) throws Exception;
+    void updateStatistics(String statisticsBuffer) throws Exception;
 
-    public void compareFirmwareVersion(String firmwareFileName, int[] result)
+    void compareFirmwareVersion(String firmwareFileName, int[] result)
             throws Exception;
 
-    public void updateFirmware(String firmwareFileName) throws Exception;
+    void updateFirmware(String firmwareFileName) throws Exception;
 
-    public PrintRecItemVoidRequest printRecItemVoid(
+    PrintRecItemVoidRequest printRecItemVoid(
             PrintRecItemVoidRequest request) throws Exception;
 
-    public PrintRecItemAdjustmentRequest printRecItemAdjustment(
+    PrintRecItemAdjustmentRequest printRecItemAdjustment(
             PrintRecItemAdjustmentRequest request) throws Exception;
 
-    public void printRecItemAdjustmentVoid(int adjustmentType,
-            String description, long amount, int vatInfo) throws Exception;
+    void printRecItemAdjustmentVoid(int adjustmentType,
+                                    String description, long amount, int vatInfo) throws Exception;
 
-    public void printRecItemRefund(String description, long amount,
-            int quantity, int vatInfo, long unitAmount, String unitName)
+    void printRecItemRefund(String description, long amount,
+                            int quantity, int vatInfo, long unitAmount, String unitName)
             throws Exception;
 
-    public void printRecItemRefundVoid(String description, long amount,
-            int quantity, int vatInfo, long unitAmount, String unitName)
+    void printRecItemRefundVoid(String description, long amount,
+                                int quantity, int vatInfo, long unitAmount, String unitName)
             throws Exception;
 }

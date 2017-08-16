@@ -201,9 +201,6 @@ public class XmlPropReader {
     private boolean readParameterBool(Node node, String paramName)
             throws Exception {
         String paramValue = readParameterStr(node, paramName);
-        if ((paramValue.equals("")) || paramValue.equalsIgnoreCase("0")) {
-            return false;
-        }
-        return true;
+        return !((paramValue.equals("")) || paramValue.equalsIgnoreCase("0"));
     }
 }

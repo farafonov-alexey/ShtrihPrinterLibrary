@@ -12,12 +12,12 @@ public interface EJDevice {
     // /////////////////////////////////////////////////////////////////////////
     // "ReportType" constants
 
-    public static final int REPORT_TYPE_SHORT = 0;
-    public static final int REPORT_TYPE_LONG = 1;
+    int REPORT_TYPE_SHORT = 0;
+    int REPORT_TYPE_LONG = 1;
 
     // /////////////////////////////////////////////////////////////////////////
     // Device encoding
 
-    public static final String CHARSET_NAME = "Cp1251";
+    String CHARSET_NAME = "Cp1251";
 
 }

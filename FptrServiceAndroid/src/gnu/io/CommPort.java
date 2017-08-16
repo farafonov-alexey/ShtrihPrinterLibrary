@@ -103,14 +103,14 @@ public abstract class CommPort extends Object {
 			CommPortIdentifier cp = 
 				CommPortIdentifier.getPortIdentifier(this);
 			if ( cp != null )
-				cp.getPortIdentifier(this).internalClosePort();
+				CommPortIdentifier.getPortIdentifier(this).internalClosePort();
 		}
 		catch (NoSuchPortException e)
 		{
 		}
-	};
+	}
 
-	public abstract InputStream getInputStream() throws IOException;
+    public abstract InputStream getInputStream() throws IOException;
 	public abstract OutputStream getOutputStream() throws IOException;
 
 	public String getName()

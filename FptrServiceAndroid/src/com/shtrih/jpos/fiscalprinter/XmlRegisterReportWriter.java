@@ -59,7 +59,7 @@ public class XmlRegisterReportWriter {
             registersNode = xmldoc.createElement("CashRegisters");
             root.appendChild(registersNode);
             for (int i = 0; i < cashRegisters.size(); i++) {
-                CashRegister cashRegister = (CashRegister) cashRegisters.get(i);
+                CashRegister cashRegister = cashRegisters.get(i);
                 node = xmldoc.createElement("CashRegister");
                 registersNode.appendChild(node);
                 node.setAttribute("Number",

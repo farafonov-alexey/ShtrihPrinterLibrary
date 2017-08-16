@@ -33,7 +33,7 @@ public class CsvRegisterReportWriter {
         try {
             CashRegisters cashRegisters = report.getCashRegisters();
             for (int i = 0; i < cashRegisters.size(); i++) {
-                CashRegister cashRegister = (CashRegister) cashRegisters.get(i);
+                CashRegister cashRegister = cashRegisters.get(i);
 
                 line = "0"
                         + Separator

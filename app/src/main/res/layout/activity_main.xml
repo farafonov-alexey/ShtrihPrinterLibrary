@@ -25,6 +25,13 @@
             android:text="@string/action_print_receipt" />
 
         <Button
+            android:id="@+id/btnPrintXReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="printXReport"
+            android:text="@string/action_print_x_report" />
+
+        <Button
             android:id="@+id/btnPrintZReport"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/connection_button"
-            android:text="connection button"
+            android:text="@string/connect_printer"
             android:onClick="onClickConnection"/>
 
         <TextView

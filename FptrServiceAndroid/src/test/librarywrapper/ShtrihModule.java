@@ -68,7 +68,8 @@ public class ShtrihModule implements LibraryInterface {
 
     @Override
     public void printReportX() {
-        printReportZ();
+        controller.setCallbackReceiver(receiver);
+        controller.print(TypePrint.X_REPORT, null);
     }
 
     @Override

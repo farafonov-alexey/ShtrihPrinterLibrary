@@ -12,5 +12,5 @@ import com.shtrih.barcode.SmBarcode;
 
 public interface SmBarcodeEncoder {
 
-	public SmBarcode encode(PrinterBarcode barcode) throws Exception;
+	SmBarcode encode(PrinterBarcode barcode) throws Exception;
 }

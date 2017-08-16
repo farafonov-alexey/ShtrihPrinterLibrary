@@ -14,32 +14,32 @@ import com.shtrih.fiscalprinter.SMFiscalPrinter;
 
 public interface ReceiptPrinter {
 
-    public void waitForPrinting() throws Exception;
+    void waitForPrinting() throws Exception;
 
-    public void printPreLine() throws Exception;
+    void printPreLine() throws Exception;
 
-    public void printPostLine() throws Exception;
+    void printPostLine() throws Exception;
 
-    public long getSubtotal() throws Exception;
+    long getSubtotal() throws Exception;
 
-    public void openReceipt(int receiptType) throws Exception;
+    void openReceipt(int receiptType) throws Exception;
 
-    public String printDescription(String description) throws Exception;
+    String printDescription(String description) throws Exception;
 
-    public void printText(String line) throws Exception;
+    void printText(String line) throws Exception;
 
-    public void printText(int station, String text, FontNumber font)
+    void printText(int station, String text, FontNumber font)
             throws Exception;
 
-    public void printStrings(String line1, String line2) throws Exception;
+    void printStrings(String line1, String line2) throws Exception;
 
-    public SMFiscalPrinter getPrinter() throws Exception;
+    SMFiscalPrinter getPrinter() throws Exception;
 
-    public int getTextLength() throws Exception;
+    int getTextLength() throws Exception;
 
-    public void printSeparator(int separatorType, int height) throws Exception;
+    void printSeparator(int separatorType, int height) throws Exception;
 
-    public int getStation(int station) throws Exception;
+    int getStation(int station) throws Exception;
 
-    public void checkZeroReceipt() throws Exception;
+    void checkZeroReceipt() throws Exception;
 }

@@ -73,7 +73,7 @@ public class ReadShortStatus extends PrinterCommand {
     public final void decode(CommandInputStream in) throws Exception {
         int operatorNumber = in.readByte();
         int flags = in.readShort();
-        int mode = ((int) in.readByte() & 0x0F);
+        int mode = (in.readByte() & 0x0F);
         int subMode = in.readByte();
         int receiptOperationsLo = in.readByte();
         int batteryState = in.readByte();

@@ -58,27 +58,27 @@ public final class DIOPrintBarcode2 {
 
         // print type
         if (params.length > 4) {
-            barcodePrintType = ((Integer)params[4]).intValue();;
+            barcodePrintType = ((Integer)params[4]).intValue();
         }
 
         // barcode bar width, pixels
         if (params.length > 5) {
-            barcodeBarWidth = ((Integer)params[5]).intValue();;
+            barcodeBarWidth = ((Integer)params[5]).intValue();
         }
 
         // text position
         if (params.length > 6) {
-            barcodeTextPosition = ((Integer)params[6]).intValue();;
+            barcodeTextPosition = ((Integer)params[6]).intValue();
         }
 
         // text font
         if (params.length > 7) {
-            barcodeTextFont = ((Integer)params[7]).intValue();;
+            barcodeTextFont = ((Integer)params[7]).intValue();
         }
 
         // aspect ratio
         if (params.length > 8) {
-            barcodeAspectRatio = ((Integer)params[8]).intValue();;
+            barcodeAspectRatio = ((Integer)params[8]).intValue();
         }
 
         PrinterBarcode bc = new PrinterBarcode();

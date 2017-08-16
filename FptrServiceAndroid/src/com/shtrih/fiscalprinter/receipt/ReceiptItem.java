@@ -13,22 +13,22 @@ import com.shtrih.fiscalprinter.SMFiscalPrinter;
 
 public interface ReceiptItem 
 {
-    public static final int RECEIPT_ITEM_SALE = 0;
-    public static final int RECEIPT_ITEM_VOID_SALE = 1;
-    public static final int RECEIPT_ITEM_REFUND = 2;
-    public static final int RECEIPT_ITEM_VOID_REFUND = 3;
-    public static final int RECEIPT_ITEM_DISCOUNT = 4;
-    public static final int RECEIPT_ITEM_CHARGE = 5;
+    int RECEIPT_ITEM_SALE = 0;
+    int RECEIPT_ITEM_VOID_SALE = 1;
+    int RECEIPT_ITEM_REFUND = 2;
+    int RECEIPT_ITEM_VOID_REFUND = 3;
+    int RECEIPT_ITEM_DISCOUNT = 4;
+    int RECEIPT_ITEM_CHARGE = 5;
 
-    public int getId();
+    int getId();
 
-    public long getAmount();
+    long getAmount();
 
-    public long getDiscount();
+    long getDiscount();
 
-    public String getDescription();
+    String getDescription();
 
-    public void addDiscount(long amount);
+    void addDiscount(long amount);
 
-    public void print(SMFiscalPrinter printer) throws Exception;
+    void print(SMFiscalPrinter printer) throws Exception;
 }

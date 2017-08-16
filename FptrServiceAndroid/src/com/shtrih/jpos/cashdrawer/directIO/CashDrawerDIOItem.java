@@ -12,6 +12,6 @@ import com.shtrih.jpos.cashdrawer.CashDrawerImpl;
 
 public interface CashDrawerDIOItem {
 
-    public void execute(CashDrawerImpl service, int[] data, Object object)
+    void execute(CashDrawerImpl service, int[] data, Object object)
             throws Exception;
 }
