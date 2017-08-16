@@ -1,31 +1,14 @@
-/*
- * PrinterPort.java
- *
- * Created on August 30 2007, 12:29
- *
- * To change this template, choose Tools | Template Manager
- * and open the template in the editor.
- */
-/**
- *
- * @author V.Kravtsov
- */
+
 package com.shtrih.fiscalprinter.port;
 
 import gnu.io.SerialPort;
-import gnu.io.SerialPortEvent;
 import gnu.io.CommPortIdentifier;
-import gnu.io.SerialPortEventListener;
-
 import java.util.Vector;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Properties;
 import java.util.Enumeration;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-
 import com.shtrih.util.Localizer;
 import com.shtrih.util.CompositeLogger;
 

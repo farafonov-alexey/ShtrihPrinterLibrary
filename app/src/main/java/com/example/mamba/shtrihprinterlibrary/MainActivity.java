@@ -39,40 +39,40 @@ public class MainActivity extends AppCompatActivity implements ShtrihPrinterCall
         shtrihModule.addPrinter();
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        switch (requestCode) {
-            case DeviceListActivity.REQUEST_CONNECT_BT_DEVICE:
-                if (resultCode == Activity.RESULT_OK) {
-                    String address = data.getExtras().getString(DeviceListActivity.EXTRA_DEVICE_ADDRESS);
-                    try {
-                        shtrihModule.setSelectedDevice(address);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-                break;
-            default:
-                super.onActivityResult(requestCode, resultCode, data);
-        }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_connect_ptk) {
-            Intent i = new Intent(this, DeviceListActivity.class);
-            startActivityForResult(i, DeviceListActivity.REQUEST_CONNECT_BT_DEVICE);
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        switch (requestCode) {
+//            case DeviceListActivity.REQUEST_CONNECT_BT_DEVICE:
+//                if (resultCode == Activity.RESULT_OK) {
+//                    String address = data.getExtras().getString(DeviceListActivity.EXTRA_DEVICE_ADDRESS);
+//                    try {
+//                        shtrihModule.setSelectedDevice(address);
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//                break;
+//            default:
+//                super.onActivityResult(requestCode, resultCode, data);
+//        }
+//    }
+//
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.main, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        int id = item.getItemId();
+//        if (id == R.id.action_connect_ptk) {
+//            Intent i = new Intent(this, DeviceListActivity.class);
+//            startActivityForResult(i, DeviceListActivity.REQUEST_CONNECT_BT_DEVICE);
+//            return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
     public void printReceipt(View v) {
         List<GoodsData> groceries = new ArrayList<>();
