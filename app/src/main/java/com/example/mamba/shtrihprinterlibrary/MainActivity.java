@@ -3,11 +3,14 @@ package com.example.mamba.shtrihprinterlibrary;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import com.shtrih.util.StaticContext;
 import java.util.ArrayList;
 import java.util.List;
+
+import test.librarywrapper.CustomLog;
 import test.librarywrapper.ShtrihModule;
 import test.librarywrapper.ShtrihPrinterCallbackReceiver;
 import test.librarywrapper.data.GoodsData;
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements ShtrihPrinterCall
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        CustomLog.enableDebugLogging(true);
         StaticContext.setContext(getApplicationContext());
         shtrihModule = new ShtrihModule(MainActivity.this);
         shtrihModule.setCallbackReceiver(this);
@@ -52,21 +56,30 @@ public class MainActivity extends AppCompatActivity implements ShtrihPrinterCall
 
     @Override
     public void onInitializationPreferences() {
+        Log.d("happy", "onInitializationPreferences");
     }
 
     @Override
     public void onDeviceList(List<String> listOfDevices) {
-
+        for(String device: listOfDevices){
+            Log.d("happy", device.toString());
+        }
     }
 
     @Override
     public void onCompletePrinting(TypePrint typePrint) {
-        statusText.setText("Печать окончена");
+        statusText.setText("код операции = "+typePrint.getCodeType()+" Печать окончена");
     }
 
     @Override
     public void onErrorPrinting(TypePrint typePrint, String error) {
-        statusText.setText("код операции " + typePrint.getCodeType() + ". " + error);
+        if(typePrint != null){
+            Log.d("happy", "код операции = " + typePrint.getCodeType() + ", " + error);
+            statusText.setText("код операции " + typePrint.getCodeType() + ". " + error);
+        }else{
+            Log.d("happy", error);
+            statusText.setText(error);
+        }
     }
 
     @Override
@@ -81,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements ShtrihPrinterCall
 
     @Override
     public void onConnected() {
+        statusText.setText("устройство подключено");
         List<GoodsData> groceries = new ArrayList<>();
         groceries.add(new GoodsData(15, "milk", 2));
         groceries.add(new GoodsData(20, "bread", 4));
@@ -92,6 +106,4 @@ public class MainActivity extends AppCompatActivity implements ShtrihPrinterCall
     public void onClickConnection(View view) {
         shtrihModule.connectDevice();
     }
-
-
 }

@@ -9,6 +9,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import static test.librarywrapper.ShtrihModule.LOG_TAG;
+
 /**
  * Created by mamba on 15.08.2017.
  */
@@ -48,7 +50,9 @@ public class RegistrationManager {
 
     public void setSelectedDevice(String deviceExternal) {
         BluetoothDevice device = (BluetoothDevice) deviceSelectionService.getObject(deviceExternal);
+        CustomLog.d(LOG_TAG, "BluetoothDevice device = (BluetoothDevice) deviceSelectionService.getObject(deviceExternal);");
         printerPreferences.savePrinterName(device.getName());
+        CustomLog.d(LOG_TAG, "printerPreferences.saveMacAddress(device.getAddress());");
         printerPreferences.saveMacAddress(device.getAddress());
     }
 

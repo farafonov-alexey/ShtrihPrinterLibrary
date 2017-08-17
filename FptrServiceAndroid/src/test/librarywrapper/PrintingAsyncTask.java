@@ -9,7 +9,7 @@ import test.librarywrapper.strategy.Instruction;
  * Created by mamba on 14.08.2017.
  */
 
-public class PrintingAsyncTask extends AsyncTask<Void, Exception, Boolean> {
+public class PrintingAsyncTask extends AsyncTask<Void, JposException, Boolean> {
     private Instruction instruction;
     private ShtrihPrinterCallbackReceiver callbackReceiver;
 
@@ -19,24 +19,21 @@ public class PrintingAsyncTask extends AsyncTask<Void, Exception, Boolean> {
     }
 
     @Override
-    protected Boolean doInBackground(Void... voids) {
+    protected Boolean doInBackground(Void... params) {
         try {
             instruction.print();
         } catch (JposException e) {
-            e.printStackTrace();
+            publishProgress(e);
+            return false;
         }
         return true;
     }
 
     @Override
-    protected void onProgressUpdate(Exception... values) {
+    protected void onProgressUpdate(JposException... values) {
         if(values == null || values.length == 0)
             return;
-        else if(values[0] instanceof JposException){
-            JposException ex = (JposException) values[0];
-            int errorCode = ex.getErrorCode();
-            callbackReceiver.onErrorPrinting(instruction.getPrintType(), values[0].getMessage());
-        }
+        callbackReceiver.onErrorPrinting(instruction.getPrintType(), values[0].getMessage());
     }
 
     @Override

@@ -56,7 +56,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/status_text"
-            android:text="@string/shtrih_printing_status"
             android:gravity="center"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 

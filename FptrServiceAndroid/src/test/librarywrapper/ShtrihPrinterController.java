@@ -1,18 +1,10 @@
 package test.librarywrapper;
 
 import android.content.Context;
-import android.os.Environment;
-import android.util.Log;
-
 import com.shtrih.fiscalprinter.ShtrihFiscalPrinter;
-import com.shtrih.util.SysUtils;
-
 import org.jetbrains.annotations.Nullable;
-
-import java.io.File;
 import java.lang.ref.WeakReference;
 import java.util.List;
-
 import jpos.JposConst;
 import jpos.JposException;
 import test.librarywrapper.config.JposConfig;
@@ -21,7 +13,7 @@ import test.librarywrapper.enums.TypePrint;
 import test.librarywrapper.strategy.Instruction;
 import test.librarywrapper.strategy.InstructionFactory;
 
-import static android.R.attr.data;
+import static test.librarywrapper.ShtrihModule.LOG_TAG;
 
 /**
  * Created by mamba on 14.08.2017.
@@ -54,18 +46,28 @@ public class ShtrihPrinterController {
 
     public void connectDevice() {
         String address = registrationManager.loadMacAddress();
+        CustomLog.d(LOG_TAG, "String address = registrationManager.loadMacAddress();");
         try {
             JposConfig.configure("ShtrihFptr", address, weakContext.get().getApplicationContext());
+            CustomLog.d(LOG_TAG, "JposConfig.configure(\"ShtrihFptr\", address, weakContext.get().getApplicationContext());");
             if (printer.getState() != JposConst.JPOS_S_CLOSED) {
                 printer.close();
+                CustomLog.d(LOG_TAG, "printer.close();");
             }
             printer.open("ShtrihFptr");
+            CustomLog.d(LOG_TAG, "printer.open(\"ShtrihFptr\");");
             printer.claim(3000);
-//            callbackReceiver.onConnected();
+            CustomLog.d(LOG_TAG, "printer.claim(3000);");
             printer.setDeviceEnabled(true);
-            Log.d("happy", "after setEnabled");
+            CustomLog.d(LOG_TAG, "printer.setDeviceEnabled(true);");
+        } catch (JposException e){
+            e.printStackTrace();
+            callbackReceiver.onErrorPrinting(null, e.getMessage());
+            CustomLog.d(LOG_TAG, "callbackReceiver.onErrorPrinting(null, e.getMessage());");
         } catch (Exception e) {
             e.printStackTrace();
+            callbackReceiver.onErrorPrinting(null, e.getMessage());
+            CustomLog.d(LOG_TAG, "callbackReceiver.onErrorPrinting(null, e.getMessage());");
         }
     }
 
@@ -76,19 +78,28 @@ public class ShtrihPrinterController {
                     synchronized (ShtrihPrinterController.this.connectionLock) {
                         while (!BluetoothManager.isStateBluetooth()) {
                             BluetoothManager.enableBluetooth();
+                            CustomLog.d(LOG_TAG, "BluetoothManager.enableBluetooth();");
                         }
                         if (registrationManager.isSavedNamePrinter() == null) {
                             List<String> listOfDevices = registrationManager.getDeviceList();
+                            CustomLog.d(LOG_TAG, "List<String> listOfDevices = registrationManager.getDeviceList();");
                             if (listOfDevices != null && listOfDevices.size() == 1)
                                 try {
                                     setSelectedDevices(listOfDevices.get(0));
+                                    CustomLog.d(LOG_TAG, "setSelectedDevices(listOfDevices.get(0));");
                                 } catch (Exception e) {
                                     e.printStackTrace();
+                                    callbackReceiver.onErrorPrinting(null, e.getMessage());
+                                    CustomLog.d(LOG_TAG, "callbackReceiver.onErrorPrinting(null, e.getMessage());");
                                 }
-                            else
+                            else{
                                 callbackReceiver.onDeviceList(listOfDevices);
-                        } else
+                                CustomLog.d(LOG_TAG, "callbackReceiver.onDeviceList(listOfDevices);");
+                            }
+                        } else{
                             callbackReceiver.onInitializationPreferences();
+                            CustomLog.d(LOG_TAG, "callbackReceiver.onInitializationPreferences();");
+                        }
                     }
                 }
             }).run();
@@ -101,7 +112,9 @@ public class ShtrihPrinterController {
 
     public void setSelectedDevices(String name){
         registrationManager.setSelectedDevice(name);
+        CustomLog.d(LOG_TAG, "registrationManager.setSelectedDevice(name);");
         callbackReceiver.onInitializationPreferences();
+        CustomLog.d(LOG_TAG, "callbackReceiver.onInitializationPreferences();");
     }
 
     public String loadNamePrinter(){

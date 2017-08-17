@@ -11,11 +11,10 @@ import test.librarywrapper.enums.TypePrint;
  */
 
 public class ShtrihModule implements LibraryInterface {
+    public static final String LOG_TAG = "happy";
     private ShtrihPrinterController controller;
     private ShtrihFiscalPrinter printer;
     private ShtrihPrinterCallbackReceiver receiver;
-
-
 
     public ShtrihModule(Context context) {
         this.printer = new ShtrihFiscalPrinter(new FiscalPrinter());
@@ -91,7 +90,6 @@ public class ShtrihModule implements LibraryInterface {
         new Thread(new Runnable() {
             @Override
             public void run() {
-//                controller.setCallbackReceiver(receiver);
                 controller.connectDevice();
                 receiver.onConnected();
             }
