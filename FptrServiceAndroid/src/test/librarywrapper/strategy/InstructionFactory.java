@@ -1,11 +1,8 @@
 package test.librarywrapper.strategy;
 
 import com.shtrih.fiscalprinter.ShtrihFiscalPrinter;
-
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import test.librarywrapper.constants.PrintType;
 import test.librarywrapper.data.ShtrihPrinterInputData;
 import test.librarywrapper.enums.TypePrint;
 

@@ -8,7 +8,7 @@ import test.librarywrapper.data.ShtrihPrinterInputData;
  * Created by mamba on 15.08.2017.
  */
 
-public interface LibraryInterface {
+public interface ShtrihModuleInterface {
     void addPrinter();
     String isSavedPrinterName();
     void clearSavedPrinterName();

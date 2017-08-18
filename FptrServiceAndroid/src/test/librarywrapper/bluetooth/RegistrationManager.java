@@ -1,4 +1,4 @@
-package test.librarywrapper;
+package test.librarywrapper.bluetooth;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -8,6 +8,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+
+import test.librarywrapper.CustomLog;
+import test.librarywrapper.bluetooth.BluetoothDeviceStringConverter;
+import test.librarywrapper.bluetooth.DeviceSelectionServiceBluetooth;
+import test.librarywrapper.bluetooth.SelectionService;
+import test.librarywrapper.bluetooth.ShtrihPrinterPreferences;
 
 import static test.librarywrapper.ShtrihModule.LOG_TAG;
 

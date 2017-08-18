@@ -1,4 +1,4 @@
-package test.librarywrapper;
+package test.librarywrapper.bluetooth;
 
 import com.google.common.base.Converter;
 

@@ -3,6 +3,7 @@ package test.librarywrapper;
 import android.content.Context;
 import com.shtrih.fiscalprinter.ShtrihFiscalPrinter;
 import jpos.FiscalPrinter;
+import test.librarywrapper.bluetooth.ShtrihPrinterPreferences;
 import test.librarywrapper.data.ShtrihPrinterInputData;
 import test.librarywrapper.enums.TypePrint;
 
@@ -10,7 +11,8 @@ import test.librarywrapper.enums.TypePrint;
  * Created by mamba on 15.08.2017.
  */
 
-public class ShtrihModule implements LibraryInterface {
+public class ShtrihModule implements ShtrihModuleInterface {
+    private static volatile boolean isConnected = false;
     public static final String LOG_TAG = "happy";
     private ShtrihPrinterController controller;
     private ShtrihFiscalPrinter printer;
@@ -19,6 +21,7 @@ public class ShtrihModule implements LibraryInterface {
     public ShtrihModule(Context context) {
         this.printer = new ShtrihFiscalPrinter(new FiscalPrinter());
         this.controller = new ShtrihPrinterController(printer, context, new ShtrihPrinterPreferences(context));
+        CustomLog.enableDebugLogging(true);
     }
 
     @Override
@@ -43,10 +46,11 @@ public class ShtrihModule implements LibraryInterface {
             @Override
             public void run() {
                 controller.setCallbackReceiver(receiver);
+                if (ShtrihModule.isConnected() == false)
+                    controller.connectDevice();
                 controller.print(TypePrint.FISCAL_TRANSACTION, inputData);
             }
         }).run();
-
     }
 
     @Override
@@ -55,6 +59,8 @@ public class ShtrihModule implements LibraryInterface {
             @Override
             public void run() {
                 controller.setCallbackReceiver(receiver);
+                if(ShtrihModule.isConnected()==false)
+                    controller.connectDevice();
                 controller.print(TypePrint.REPEAT_TRANSACTION, null);
             }
         }).run();
@@ -67,14 +73,28 @@ public class ShtrihModule implements LibraryInterface {
 
     @Override
     public void printReportX() {
-        controller.setCallbackReceiver(receiver);
-        controller.print(TypePrint.X_REPORT, null);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                controller.setCallbackReceiver(receiver);
+                if(ShtrihModule.isConnected() == false)
+                    controller.connectDevice();
+                controller.print(TypePrint.X_REPORT, null);
+            }
+        }).run();
     }
 
     @Override
     public void printReportZ() {
-        controller.setCallbackReceiver(receiver);
-        controller.print(TypePrint.Z_REPORT, null);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                controller.setCallbackReceiver(receiver);
+                if (ShtrihModule.isConnected() == false)
+                    controller.connectDevice();
+                controller.print(TypePrint.Z_REPORT, null);
+            }
+        }).run();
     }
 
     @Override
@@ -90,11 +110,18 @@ public class ShtrihModule implements LibraryInterface {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                controller.connectDevice();
+                if(ShtrihModule.isConnected() == false)
+                    controller.connectDevice();
                 receiver.onConnected();
             }
         }).run();
     }
 
+    public static boolean isConnected() {
+        return isConnected;
+    }
 
+    public static void setIsConnected(boolean isConnected) {
+        ShtrihModule.isConnected = isConnected;
+    }
 }

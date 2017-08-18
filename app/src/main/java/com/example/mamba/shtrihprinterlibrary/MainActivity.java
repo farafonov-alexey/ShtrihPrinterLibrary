@@ -103,6 +103,12 @@ public class MainActivity extends AppCompatActivity implements ShtrihPrinterCall
         shtrihModule.printFiscalCheck(data);
     }
 
+    @Override
+    public void onDisconnected() {
+        ShtrihModule.setIsConnected(false);
+        shtrihModule.connectDevice();
+    }
+
     public void onClickConnection(View view) {
         shtrihModule.connectDevice();
     }

@@ -1,4 +1,4 @@
-package test.librarywrapper;
+package test.librarywrapper.bluetooth;
 
 import android.content.Context;
 import android.content.SharedPreferences;

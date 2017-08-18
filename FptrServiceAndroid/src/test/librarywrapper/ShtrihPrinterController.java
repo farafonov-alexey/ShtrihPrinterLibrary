@@ -7,11 +7,15 @@ import java.lang.ref.WeakReference;
 import java.util.List;
 import jpos.JposConst;
 import jpos.JposException;
+import test.librarywrapper.bluetooth.BluetoothManager;
+import test.librarywrapper.bluetooth.RegistrationManager;
+import test.librarywrapper.bluetooth.ShtrihPrinterPreferences;
 import test.librarywrapper.config.JposConfig;
 import test.librarywrapper.data.ShtrihPrinterInputData;
 import test.librarywrapper.enums.TypePrint;
 import test.librarywrapper.strategy.Instruction;
 import test.librarywrapper.strategy.InstructionFactory;
+import test.librarywrapper.strategy.PrintingAsyncTask;
 
 import static test.librarywrapper.ShtrihModule.LOG_TAG;
 
@@ -60,6 +64,8 @@ public class ShtrihPrinterController {
             CustomLog.d(LOG_TAG, "printer.claim(3000);");
             printer.setDeviceEnabled(true);
             CustomLog.d(LOG_TAG, "printer.setDeviceEnabled(true);");
+            ShtrihModule.setIsConnected(true);
+            CustomLog.d(LOG_TAG, "ShtrihModule.setIsConnected(true);");
         } catch (JposException e){
             e.printStackTrace();
             callbackReceiver.onErrorPrinting(null, e.getMessage());
@@ -91,6 +97,8 @@ public class ShtrihPrinterController {
                                     e.printStackTrace();
                                     callbackReceiver.onErrorPrinting(null, e.getMessage());
                                     CustomLog.d(LOG_TAG, "callbackReceiver.onErrorPrinting(null, e.getMessage());");
+                                    if(e.getMessage().equals("Control not opened"))
+                                        callbackReceiver.onDisconnected();
                                 }
                             else{
                                 callbackReceiver.onDeviceList(listOfDevices);

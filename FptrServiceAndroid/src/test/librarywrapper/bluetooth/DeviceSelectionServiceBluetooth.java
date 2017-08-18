@@ -1,8 +1,6 @@
-package test.librarywrapper;
+package test.librarywrapper.bluetooth;
 
 import android.bluetooth.BluetoothDevice;
-
-import com.google.common.base.Converter;
 
 import java.util.List;
 

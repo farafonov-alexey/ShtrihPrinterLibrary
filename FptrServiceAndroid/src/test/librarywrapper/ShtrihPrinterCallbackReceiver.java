@@ -19,4 +19,5 @@ public interface ShtrihPrinterCallbackReceiver {
     void onReportPrintingZ();
     void onReportAlreadyClosed();
     void onConnected();
+    void onDisconnected();
 }

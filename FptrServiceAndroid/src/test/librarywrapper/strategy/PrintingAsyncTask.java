@@ -1,9 +1,9 @@
-package test.librarywrapper;
+package test.librarywrapper.strategy;
 
 import android.os.AsyncTask;
 
 import jpos.JposException;
-import test.librarywrapper.strategy.Instruction;
+import test.librarywrapper.ShtrihPrinterCallbackReceiver;
 
 /**
  * Created by mamba on 14.08.2017.
