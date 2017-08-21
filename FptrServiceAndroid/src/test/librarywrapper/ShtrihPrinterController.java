@@ -1,6 +1,8 @@
 package test.librarywrapper;
 
 import android.content.Context;
+import android.os.Handler;
+
 import com.shtrih.fiscalprinter.ShtrihFiscalPrinter;
 import org.jetbrains.annotations.Nullable;
 import java.lang.ref.WeakReference;
@@ -24,6 +26,8 @@ import static test.librarywrapper.ShtrihModule.LOG_TAG;
  */
 
 public class ShtrihPrinterController {
+    private static final int RECONNECTION_LIMIT = 2;
+    private volatile int reconnectionCount;
     private ShtrihPrinterCallbackReceiver callbackReceiver;
     private WeakReference<Context> weakContext;
     private ShtrihFiscalPrinter printer;
@@ -32,6 +36,7 @@ public class ShtrihPrinterController {
 
 
     public ShtrihPrinterController(ShtrihFiscalPrinter printer, Context context, ShtrihPrinterPreferences shtrihPrinterPreferences) {
+        this.reconnectionCount = 0;
         this.printer = printer;
         this.weakContext = new WeakReference<>(context);
         this.registrationManager = new RegistrationManager(context, shtrihPrinterPreferences);
@@ -48,7 +53,7 @@ public class ShtrihPrinterController {
         this.callbackReceiver = receiver;
     }
 
-    public void connectDevice() {
+    public synchronized void connectDevice() {
         String address = registrationManager.loadMacAddress();
         CustomLog.d(LOG_TAG, "String address = registrationManager.loadMacAddress();");
         try {
@@ -59,21 +64,37 @@ public class ShtrihPrinterController {
                 CustomLog.d(LOG_TAG, "printer.close();");
             }
             printer.open("ShtrihFptr");
-            CustomLog.d(LOG_TAG, "printer.open(\"ShtrihFptr\");");
+            CustomLog.d(LOG_TAG, "printer.open(\"ShtrihFptr\");"+"Thread: "+Thread.currentThread().getName());
             printer.claim(3000);
-            CustomLog.d(LOG_TAG, "printer.claim(3000);");
+            CustomLog.d(LOG_TAG, "printer.claim(3000);"+"Thread: "+Thread.currentThread().getName());
             printer.setDeviceEnabled(true);
-            CustomLog.d(LOG_TAG, "printer.setDeviceEnabled(true);");
+            CustomLog.d(LOG_TAG, "printer.setDeviceEnabled(true);"+"Thread: "+Thread.currentThread().getName());
             ShtrihModule.setIsConnected(true);
-            CustomLog.d(LOG_TAG, "ShtrihModule.setIsConnected(true);");
-        } catch (JposException e){
+            reconnectionCount = 0;
+            CustomLog.d(LOG_TAG, "ShtrihModule.setIsConnected(true);"+"Thread: "+Thread.currentThread().getName());
+        } catch (final JposException e){
             e.printStackTrace();
-            callbackReceiver.onErrorPrinting(null, e.getMessage());
-            CustomLog.d(LOG_TAG, "callbackReceiver.onErrorPrinting(null, e.getMessage());");
-        } catch (Exception e) {
+            onDisconnected();
+            CustomLog.d(LOG_TAG, "onDisconnected();");
+//            callbackReceiver.onConnectionError(e.getMessage());
+            CustomLog.d(LOG_TAG, "callbackReceiver.onConnectionError(e.getMessage());"+"Thread: "+Thread.currentThread().getName());
+        } catch (final Exception e) {
             e.printStackTrace();
-            callbackReceiver.onErrorPrinting(null, e.getMessage());
-            CustomLog.d(LOG_TAG, "callbackReceiver.onErrorPrinting(null, e.getMessage());");
+            onDisconnected();
+            CustomLog.d(LOG_TAG, "onDisconnected();");
+//            callbackReceiver.onConnectionError(e.getMessage());
+            CustomLog.d(LOG_TAG, "callbackReceiver.onConnectionError(e.getMessage());"+"Thread: "+Thread.currentThread().getName());
+        }
+    }
+
+    private void onDisconnected(){
+        ShtrihModule.setIsConnected(false);
+        reconnectionCount++;
+        if (reconnectionCount > RECONNECTION_LIMIT){
+            callbackReceiver.onConnectionError(null);
+            reconnectionCount = 0;
+        }else{
+            connectDevice();
         }
     }
 
@@ -89,17 +110,10 @@ public class ShtrihPrinterController {
                         if (registrationManager.isSavedNamePrinter() == null) {
                             List<String> listOfDevices = registrationManager.getDeviceList();
                             CustomLog.d(LOG_TAG, "List<String> listOfDevices = registrationManager.getDeviceList();");
-                            if (listOfDevices != null && listOfDevices.size() == 1)
-                                try {
-                                    setSelectedDevices(listOfDevices.get(0));
-                                    CustomLog.d(LOG_TAG, "setSelectedDevices(listOfDevices.get(0));");
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                    callbackReceiver.onErrorPrinting(null, e.getMessage());
-                                    CustomLog.d(LOG_TAG, "callbackReceiver.onErrorPrinting(null, e.getMessage());");
-                                    if(e.getMessage().equals("Control not opened"))
-                                        callbackReceiver.onDisconnected();
-                                }
+                            if (listOfDevices != null && listOfDevices.size() == 1){
+                                setSelectedDevices(listOfDevices.get(0));
+                                CustomLog.d(LOG_TAG, "setSelectedDevices(listOfDevices.get(0));");
+                            }
                             else{
                                 callbackReceiver.onDeviceList(listOfDevices);
                                 CustomLog.d(LOG_TAG, "callbackReceiver.onDeviceList(listOfDevices);");
@@ -131,5 +145,9 @@ public class ShtrihPrinterController {
 
     public void clearDataBases() {
         registrationManager.clearDataBase();
+    }
+
+    public String isSavedPrinterName() {
+        return registrationManager.loadNamePrinter();
     }
 }

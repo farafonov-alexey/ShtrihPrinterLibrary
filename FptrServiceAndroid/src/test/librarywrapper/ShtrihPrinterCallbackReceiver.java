@@ -1,5 +1,6 @@
 package test.librarywrapper;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -15,9 +16,9 @@ public interface ShtrihPrinterCallbackReceiver {
     void onInitializationPreferences();
     void onDeviceList(List<String> listOfDevices);
     void onCompletePrinting(TypePrint typePrint);
-    void onErrorPrinting(@Nullable TypePrint typePrint, String error);
+    void onErrorPrinting(@NotNull TypePrint typePrint, String error);
     void onReportPrintingZ();
     void onReportAlreadyClosed();
     void onConnected();
-    void onDisconnected();
+    void onConnectionError(String error);
 }

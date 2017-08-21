@@ -4,10 +4,12 @@ import com.shtrih.fiscalprinter.ShtrihFiscalPrinter;
 
 import java.util.List;
 
+import jpos.FiscalPrinterConst;
 import jpos.JposException;
 import test.librarywrapper.constants.ReceiptTemplateText;
 import test.librarywrapper.data.GoodsData;
 import test.librarywrapper.data.ShtrihPrinterInputData;
+import test.librarywrapper.enums.PrinterOperationType;
 import test.librarywrapper.enums.TypePrint;
 
 /**
@@ -30,7 +32,9 @@ public class TransactionInstruction extends Instruction {
         long payment = 0;
         List<GoodsData> goodsDataList = inputData.getGoodsData();
         printer.resetPrinter();
-        printer.setFiscalReceiptType(jpos.FiscalPrinterConst.FPTR_RT_SALES);
+        printer.setFiscalReceiptType(FiscalPrinterConst.FPTR_MT_CARD);
+        if(inputData.isCash())
+            printer.setFiscalReceiptType(FiscalPrinterConst.FPTR_MT_CASH);
         printer.beginFiscalReceipt(false);
         printer.setHeaderLine(1, "", false);
         printer.setHeaderLine(2, "", false);
@@ -40,11 +44,13 @@ public class TransactionInstruction extends Instruction {
             int quantity = QUANTITY_MULTIPLIER*item.getQuantity();
             payment += price;
             String itemName = item.getName();
-            printer.printRecItem(itemName, 0, quantity, 0, price, "");
+            if(inputData.getOperationType().equals(PrinterOperationType.REFUND))
+                printer.printRecItemRefund(itemName, 0, quantity, 0, price, "");
+            else
+                printer.printRecItem(itemName, 0, quantity, 0, price, "");
         }
         printer.printRecTotal(payment, payment, ReceiptTemplateText.RESULT);
         printer.endFiscalReceipt(false);
     }
 }
-//TODO:
-//некоректное отображение количества
+

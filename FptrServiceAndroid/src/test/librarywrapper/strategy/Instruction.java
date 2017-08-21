@@ -11,7 +11,7 @@ import test.librarywrapper.enums.TypePrint;
 
 public abstract class Instruction {
     protected static final int PRICE_MULTIPLIER = 100;
-    protected static final int QUANTITY_MULTIPLIER = 100;
+    protected static final int QUANTITY_MULTIPLIER = 1000;
     protected ShtrihFiscalPrinter printer;
     protected TypePrint typePrint;
 

@@ -73,13 +73,15 @@ public class MainActivity extends AppCompatActivity implements ShtrihPrinterCall
 
     @Override
     public void onErrorPrinting(TypePrint typePrint, String error) {
-        if(typePrint != null){
-            Log.d("happy", "код операции = " + typePrint.getCodeType() + ", " + error);
-            statusText.setText("код операции " + typePrint.getCodeType() + ". " + error);
-        }else{
-            Log.d("happy", error);
-            statusText.setText(error);
-        }
+        Log.d("happy", "код операции = " + typePrint.getCodeType() + ", " + error);
+        statusText.setText("код операции " + typePrint.getCodeType() + ". " + error);
+
+    }
+
+    @Override
+    public void onConnectionError(String error) {
+        Log.d("happy", error);
+        statusText.setText(error);
     }
 
     @Override
@@ -103,9 +105,7 @@ public class MainActivity extends AppCompatActivity implements ShtrihPrinterCall
         shtrihModule.printFiscalCheck(data);
     }
 
-    @Override
     public void onDisconnected() {
-        ShtrihModule.setIsConnected(false);
         shtrihModule.connectDevice();
     }
 

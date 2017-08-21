@@ -10,7 +10,6 @@ import test.librarywrapper.data.ShtrihPrinterInputData;
 
 public interface ShtrihModuleInterface {
     void addPrinter();
-    String isSavedPrinterName();
     void clearSavedPrinterName();
     void printFiscalCheck(ShtrihPrinterInputData inputData);
     void printRepeatedCheck(ShtrihPrinterInputData inputData);
@@ -19,4 +18,5 @@ public interface ShtrihModuleInterface {
     void printReportZ();
     void setSelectedDevice(String macAddress) throws Exception;
     void setCallbackReceiver(ShtrihPrinterCallbackReceiver receiver);
+    String isSavedPrinterName();
 }

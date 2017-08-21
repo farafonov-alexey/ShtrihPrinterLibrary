@@ -31,8 +31,8 @@ public class ShtrihModule implements ShtrihModuleInterface {
     }
 
     @Override
-    public String isSavedPrinterName() {
-        return controller.loadNamePrinter();
+    public String isSavedPrinterName(){
+        return controller.isSavedPrinterName();
     }
 
     @Override
@@ -49,8 +49,9 @@ public class ShtrihModule implements ShtrihModuleInterface {
                 if (ShtrihModule.isConnected() == false)
                     controller.connectDevice();
                 controller.print(TypePrint.FISCAL_TRANSACTION, inputData);
+                CustomLog.d(LOG_TAG, "thread: "+Thread.currentThread().getName());
             }
-        }).run();
+        }).start();
     }
 
     @Override
@@ -63,7 +64,7 @@ public class ShtrihModule implements ShtrihModuleInterface {
                     controller.connectDevice();
                 controller.print(TypePrint.REPEAT_TRANSACTION, null);
             }
-        }).run();
+        }).start();
     }
 
     @Override
@@ -81,7 +82,7 @@ public class ShtrihModule implements ShtrihModuleInterface {
                     controller.connectDevice();
                 controller.print(TypePrint.X_REPORT, null);
             }
-        }).run();
+        }).start();
     }
 
     @Override
@@ -94,7 +95,7 @@ public class ShtrihModule implements ShtrihModuleInterface {
                     controller.connectDevice();
                 controller.print(TypePrint.Z_REPORT, null);
             }
-        }).run();
+        }).start();
     }
 
     @Override
@@ -110,11 +111,12 @@ public class ShtrihModule implements ShtrihModuleInterface {
         new Thread(new Runnable() {
             @Override
             public void run() {
+                controller.setCallbackReceiver(receiver);
                 if(ShtrihModule.isConnected() == false)
                     controller.connectDevice();
                 receiver.onConnected();
             }
-        }).run();
+        }).start();
     }
 
     public static boolean isConnected() {
