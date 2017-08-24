@@ -12,9 +12,9 @@ public class GoodsData {
     private final int quantity;
 
     public GoodsData(double price, String name, int quantity) {
-        this.price = (price<=0)||(price>999_999_999)? ReceiptTemplateText.QUANTITY : price;
-        this.name = (name == null || name.isEmpty() || (name.length() > 30)) ? ReceiptTemplateText.SERVICE : name;
-        this.quantity = (quantity<1)||(price>999_999_999)? ReceiptTemplateText.QUANTITY : quantity;
+        this.price = price;
+        this.name = name;
+        this.quantity = quantity;
     }
 
     public double getPrice() {

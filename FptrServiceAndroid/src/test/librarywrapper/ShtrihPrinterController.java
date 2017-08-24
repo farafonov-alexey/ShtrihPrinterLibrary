@@ -1,8 +1,6 @@
 package test.librarywrapper;
 
 import android.content.Context;
-import android.os.Handler;
-
 import com.shtrih.fiscalprinter.ShtrihFiscalPrinter;
 import org.jetbrains.annotations.Nullable;
 import java.lang.ref.WeakReference;
@@ -76,14 +74,10 @@ public class ShtrihPrinterController {
             e.printStackTrace();
             onDisconnected();
             CustomLog.d(LOG_TAG, "onDisconnected();");
-//            callbackReceiver.onConnectionError(e.getMessage());
-            CustomLog.d(LOG_TAG, "callbackReceiver.onConnectionError(e.getMessage());"+"Thread: "+Thread.currentThread().getName());
         } catch (final Exception e) {
             e.printStackTrace();
             onDisconnected();
             CustomLog.d(LOG_TAG, "onDisconnected();");
-//            callbackReceiver.onConnectionError(e.getMessage());
-            CustomLog.d(LOG_TAG, "callbackReceiver.onConnectionError(e.getMessage());"+"Thread: "+Thread.currentThread().getName());
         }
     }
 
